@@ -1,0 +1,63 @@
+a[href="#enroll"],
+a[href="#consultation"] {
+    font-weight: 550;
+    font-size: 17px;
+    color: #FFFFFF;
+    padding-top: 16.5px;
+    padding-bottom: 27.5px;
+    padding-left: 28.5px;
+    padding-right: 66.5px;
+    background: $button-bg;
+    @include transit();
+    .icon-arrow-right-shot {
+        width: 20px;
+        margin-left: 26.5px;
+    }
+    &:hover {
+        .icon-arrow-right-shot,
+        .icon-arrow-right-long {
+            animation-name: hvr-icon-wobble-horizontal;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 1;
+        }
+    }
+}
+a[href="#consultation"] {
+    font-size: 18px;
+    padding: 24.5px 120px 24.5px 42.5px;
+    position: relative;
+    .icon-arrow-right-long {
+        width: 87px;
+        position: absolute;
+        right: -37px;
+        // transform: translateX(75px);
+    }
+}
+
+@keyframes hvr-icon-wobble-horizontal {
+    16.65% {
+        -webkit-transform: translateX(6px);
+        transform: translateX(6px);
+    }
+    33.3% {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+    49.95% {
+        -webkit-transform: translateX(4px);
+        transform: translateX(4px);
+    }
+    66.6% {
+        -webkit-transform: translateX(-2px);
+        transform: translateX(-2px);
+    }
+    83.25% {
+        -webkit-transform: translateX(1px);
+        transform: translateX(1px);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
