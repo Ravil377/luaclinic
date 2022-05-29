@@ -18,13 +18,6 @@ const openMobilMenu = () => {
 	body.classList.toggle('fixed');
 	mobilMenu.classList.toggle('active');
 }
-const hiddenLi = () => {
-	$mobilListMenuServices.querySelectorAll('li').forEach(item => {
-		if(!item.classList.contains('active')) {
-			item.style.display = 'none';
-		}
-	})
-}
 
 mobilListMenu.addEventListener('click', (e) => {
 	const isList = e.target.dataset.list === 'all';

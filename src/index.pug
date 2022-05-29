@@ -13,6 +13,28 @@ block welcome
                 p — наука, изучающая эстетические проблемы организма человека, их этиологии, проявления и методы коррекции, также свод методик, направленных
                 a(href='#consultation') Консультация
                     +icon('arrow-right-long')
+block numbers 
+    .numbers 
+        .container 
+            .row 
+                .col-lg-4.col-sm-6.col-12.numbers__container
+                    .number__num 12
+                    .number__text средний опыт наших врачей
+                        span все наши врачи высшей категории
+                .col-lg-5.col-sm-6.col-12.numbers__container
+                    .number__num 15
+                    .number__text мы работаем уже более 20 лет в косметологии
+                        span учимся и развиваемся
+                .col-lg-3.d-lg-block.d-none.position-relative
+                    .number__image
+                        +icon('flower')
+block basic-services
+    .basic-services 
+        .container 
+            h2.title Основные услуги 
+            .basic-services__list
+                include ./components/basic-services/basic-services
+                
 //- block menuServices
 //-     .menu-services 
 
