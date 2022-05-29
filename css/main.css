@@ -14409,6 +14409,9 @@ a {
   transition: all 0.24s;
 }
 
+body {
+  overflow-x: hidden;
+}
 body.fixed .logo-svg {
   fill: #000;
 }
