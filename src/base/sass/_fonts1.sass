@@ -1,0 +1,33 @@
+/* Include fonts
+   ========================================================================= */
+
+/**
+ * HelveticaNeueCyr
+ */
+ // 300
+//@include fontFace('HelveticaNeueCyr', 'HelveticaNeueCyr-Light', '300', 'normal', 'woff2')
+//@include fontFace('HelveticaNeueCyr', 'HelveticaNeueCyr-Light', '300', 'normal', 'woff')
+// 400
+//@include fontFace('HelveticaNeueCyr', 'HelveticaNeueCyr-Roman', '400', 'normal', 'woff2')
+//@include fontFace('HelveticaNeueCyr', 'HelveticaNeueCyr-Roman', '400', 'normal', 'woff')
+// 500
+@include fontFace('HelveticaNeueCyr', 'HelveticaNeueCyr-Medium', '500', 'normal', 'woff2')
+@include fontFace('HelveticaNeueCyr', 'HelveticaNeueCyr-Medium', '500', 'normal', 'woff')
+
+
+@font-face {
+  font-family: 'HelveticaNeueCyr';
+  src:  url('../fonts/HelveticaNeueCyr-Roman.woff2') format('woff2'),
+        url('../fonts/HelveticaNeueCyr-Roman.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'HelveticaNeueCyr';
+  src:  url('../fonts/HelveticaNeueCyr-Light.woff2') format('woff2'),
+        url('../fonts/HelveticaNeueCyr-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}

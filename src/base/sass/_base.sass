@@ -6,3 +6,30 @@
 a
 	text-decoration: none
 	@include transit()
+body
+	//position: relative
+	//font-family: $font-family-base
+	&.fixed
+		//overflow-y: hidden
+		.logo-svg
+			fill: #000
+		.header__mobil
+			a
+				svg
+					fill: #000
+		.hamburger 
+			&::after,
+			&::before
+				background: #000
+		.wrapper__content
+			background: #fff
+			position: unset
+		.wrapper__content.wrapper__content_bg
+			&:after 
+				background: unset
+
+@keyframes fadeIn
+	from
+		opacity: 0
+	to
+		opacity: 1

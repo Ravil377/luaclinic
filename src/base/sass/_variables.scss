@@ -1,5 +1,5 @@
 // Font
-$font-family-base: "HelveticaNeueCyr", sans-serif;
+$font-family-base: 'HelveticaNeueCyr', sans-serif;
 $enable-smooth-scroll: false;
 
 /**
@@ -22,7 +22,7 @@ $container-max-widths: (
 	sm: 540px,
 	md: 720px,
 	lg: 960px,
-	xl: 1140px,
+	xl: 1200px,
 	xxl: 1290px
 );
 
@@ -78,6 +78,7 @@ $spacers: (
 $header-menu: #BDBDBD;
 $button-bg:      #D1A788;
 $header-menu1:  #626262;
+$border-bottom: #E8E8E8;
 
 $white:    #fff;
 $gray-100: #f8f9fa;

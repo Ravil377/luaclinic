@@ -1,5 +1,6 @@
 a[href="#enroll"],
 a[href="#consultation"] {
+    display: block;
     font-weight: 550;
     font-size: 17px;
     color: #FFFFFF;
@@ -14,7 +15,12 @@ a[href="#consultation"] {
         margin-left: 26.5px;
     }
     &:hover {
-        .icon-arrow-right-shot,
+        .icon-arrow-right-shot {
+            animation-name: hvr-icon-wobble-horizontal1;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 1;
+        }
         .icon-arrow-right-long {
             animation-name: hvr-icon-wobble-horizontal;
             animation-duration: 1s;
@@ -24,40 +30,73 @@ a[href="#consultation"] {
     }
 }
 a[href="#consultation"] {
-    font-size: 18px;
-    padding: 24.5px 120px 24.5px 42.5px;
+    font-size: 16px;
+    padding: 17.5px 55px 18.5px 29px;
     position: relative;
+    width: auto;
+    text-align: left;
+    margin-right: 33px;
+    @media (min-width: 576px) {
+        max-width: 320px;
+        margin: 0 auto;
+        width: auto;
+    }
+    @media (min-width: 992px) {
+        width: fit-content;
+        margin: 0;
+        max-width: unset;
+        font-size: 18px;    
+        padding: 24.5px 120px 24.5px 42.5px;
+    }
     .icon-arrow-right-long {
         width: 87px;
         position: absolute;
         right: -37px;
+        top: 50%;
+        transform: translateY(-50%);
+        @media (min-width: 992px) {}
+
         // transform: translateX(75px);
+    }
+}
+@keyframes hvr-icon-wobble-horizontal1 {
+    16.65% {
+        transform: translateX(6px);
+    }
+    33.3% {
+        transform: translateX(-5px);
+    }
+    49.95% {
+        transform: translateX(4px);
+    }
+    66.6% {
+        transform: translateX(-2px);
+    }
+    83.25% {
+        transform: translateX(1px);
+    }
+    100% {
+        transform: translateX(0);
     }
 }
 
 @keyframes hvr-icon-wobble-horizontal {
     16.65% {
-        -webkit-transform: translateX(6px);
-        transform: translateX(6px);
+        transform: translateX(6px) translateY(-50%);
     }
     33.3% {
-        -webkit-transform: translateX(-5px);
-        transform: translateX(-5px);
+        transform: translateX(-5px) translateY(-50%);
     }
     49.95% {
-        -webkit-transform: translateX(4px);
-        transform: translateX(4px);
+        transform: translateX(4px) translateY(-50%);
     }
     66.6% {
-        -webkit-transform: translateX(-2px);
-        transform: translateX(-2px);
+        transform: translateX(-2px) translateY(-50%);
     }
     83.25% {
-        -webkit-transform: translateX(1px);
-        transform: translateX(1px);
+        transform: translateX(1px) translateY(-50%);
     }
     100% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
+        transform: translateX(0) translateY(-50%);
     }
 }

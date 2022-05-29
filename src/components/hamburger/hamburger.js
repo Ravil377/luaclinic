@@ -2,12 +2,47 @@
 // import { overlayAdd, overlayRemove } from '../overlay/overlay'
 
 const $hamburger = document.querySelector('[id="services"]');
+const $hamburgerBtn = document.querySelector('.hamburger--js');
+const header = document.querySelector('.header');
+const body = document.querySelector("body");
+const $menuServicesCloseBtn = document.querySelector('.menu-services__close-btn-js');
+const mobilListMenu = document.querySelector('.header__mobil-menu-list-1');
+const $mobilListMenuServices = document.querySelector('.header__mobil-menu-services');
+const mobilMenu = document.querySelector('.header__mobil-menu');
 
-const openServices = () => {
-	console.log('dfdf');
+const toggleServices = () => {
+	header.classList.toggle('active');
+	body.classList.toggle('fixed');
+}
+const openMobilMenu = () => {
+	body.classList.toggle('fixed');
+	mobilMenu.classList.toggle('active');
+}
+const hiddenLi = () => {
+	$mobilListMenuServices.querySelectorAll('li').forEach(item => {
+		if(!item.classList.contains('active')) {
+			item.style.display = 'none';
+		}
+	})
 }
 
-$hamburger.addEventListener('click', openServices);
+mobilListMenu.addEventListener('click', (e) => {
+	const isList = e.target.dataset.list === 'all';
+	if(isList) {
+		mobilMenu.classList.toggle('list');
+		e.target.classList.toggle('active');
+	} 
+})
+$mobilListMenuServices.addEventListener('click', (e) => {
+	mobilMenu.classList.add('services');
+	e.target.classList.toggle('active');
+	if(!$mobilListMenuServices.querySelector('.active')) {
+		mobilMenu.classList.remove('services');
+	}
+})
+$menuServicesCloseBtn.addEventListener('click', toggleServices);
+$hamburger.addEventListener('click', toggleServices);
+$hamburgerBtn.addEventListener('click', openMobilMenu);
 // const $mainmenu = document.querySelector('.mainmenu--js')
 // const $closeBtn = document.querySelector('.mainmenu--close')
 

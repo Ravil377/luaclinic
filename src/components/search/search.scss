@@ -1,0 +1,30 @@
+.search {
+    position: relative;
+}
+.search .search-btn {
+    position: absolute;
+    right: 21px;
+    top: 10px;
+    width: 13px;
+    height: 13px;
+    svg {
+        fill: #000;
+    }
+}
+.search__input {
+    input {
+        width: 100%;
+        background: #FFFFFF;
+        border: 1px solid #E6E6E6;
+        padding-top: 13px;
+        padding-bottom: 10px;
+        padding-left: 29px;
+        padding-right: 63px;
+        &::placeholder {
+            font-weight: 400;
+            font-size: 13px;
+            letter-spacing: 0.01em;
+            color: #999999;
+        }
+    }
+}

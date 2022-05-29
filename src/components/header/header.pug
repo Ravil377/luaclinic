@@ -1,6 +1,7 @@
-header.header.active
+header.header
+    .menu-services__close-btn.menu-services__close-btn-js
     .container
-        .header__top.row.justify-content-between
+        .header__top.row.justify-content-between.d-none.d-xl-flex
             nav.col-6.py-20
                 ul.d-flex
                     li 
@@ -13,8 +14,8 @@ header.header.active
                         a(href="#") Оборудование
                     li 
                         a(href="#") Контакты
-            .col-6.px-0.d-flex.header__top-right.justify-content-between.align-items-baseline
-                .search
+            .col-6.d-flex.header__top-right.justify-content-between.align-items-baseline
+                .search-btn
                     <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M14.9442 13.4866L12.8272 11.3785C13.7948 10.1458 14.3199 8.62352 14.3179 7.05642C14.3179 5.66079 13.9041 4.29651 13.1287 3.13608C12.3533 1.97566 11.2513 1.07122 9.96187 0.537141C8.67248 0.00305741 7.25367 -0.136683 5.88486 0.13559C4.51605 0.407864 3.25871 1.07992 2.27186 2.06678C1.285 3.05364 0.612942 4.31097 0.340668 5.67978C0.068395 7.04859 0.208136 8.4674 0.742219 9.75679C1.2763 11.0462 2.18074 12.1482 3.34116 12.9236C4.50158 13.699 5.86587 14.1128 7.2615 14.1128C8.8286 14.1148 10.3508 13.5898 11.5836 12.6222L13.6917 14.7391C13.7737 14.8218 13.8712 14.8874 13.9787 14.9322C14.0862 14.9769 14.2015 15 14.3179 15C14.4344 15 14.5496 14.9769 14.6571 14.9322C14.7646 14.8874 14.8622 14.8218 14.9442 14.7391C15.0268 14.6571 15.0925 14.5595 15.1372 14.4521C15.182 14.3446 15.2051 14.2293 15.2051 14.1128C15.2051 13.9964 15.182 13.8811 15.1372 13.7736C15.0925 13.6661 15.0268 13.5686 14.9442 13.4866ZM1.96918 7.05642C1.96918 6.0097 2.27957 4.98648 2.8611 4.11617C3.44263 3.24585 4.26917 2.56752 5.23622 2.16696C6.20326 1.7664 7.26737 1.66159 8.29397 1.8658C9.32058 2.07 10.2636 2.57405 11.0037 3.31419C11.7439 4.05433 12.2479 4.99733 12.4521 6.02394C12.6563 7.05055 12.5515 8.11465 12.151 9.0817C11.7504 10.0487 11.0721 10.8753 10.2017 11.4568C9.33143 12.0383 8.30822 12.3487 7.2615 12.3487C5.85789 12.3487 4.51177 11.7911 3.51927 10.7986C2.52677 9.80615 1.96918 8.46003 1.96918 7.05642Z"/>
                     </svg>
@@ -22,19 +23,26 @@ header.header.active
                 a(href="tel:88002103010") 8 800 210-30-10
                 a(href="#enroll") Записаться
                     +icon('arrow-right-shot') 
-        .row.align-items-center.header__bottom
-            //- .col-3.d-lg-none
-            //-     include ../hamburger/hamburger
-
-            .col-3.px-0
+        .row.align-items-center.header__bottom.justify-content-between
+            .col-3
                 .logo
                     include ../logo/logo
-            .col-4.px-0.header__info 
+            .col-auto.d-xl-none.header__mobil
+                .row.align-items-center
+                    .col-auto.px-0.header__mobil-link
+                        a(href="tel:88002103010" title="8 800 210-30-10")
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.3693 19.9602C11.2947 19.9549 7.38854 18.334 4.50738 15.4528C1.62623 12.5717 0.00528135 8.66549 0 4.59093C0 3.37337 0.483674 2.20568 1.34462 1.34473C2.20556 0.483788 3.37326 0.000114067 4.59082 0.000114067C4.84864 -0.00184981 5.10604 0.0215495 5.35928 0.0699743C5.6041 0.106202 5.84478 0.166371 6.07784 0.249615C6.24176 0.307129 6.38783 0.406435 6.5016 0.537711C6.61538 0.668987 6.69291 0.827687 6.72655 0.998118L8.09381 6.98614C8.13066 7.14868 8.12623 7.31786 8.0809 7.47824C8.03557 7.63862 7.95081 7.7851 7.83433 7.9043C7.70459 8.04402 7.69461 8.054 6.46706 8.69273C7.45009 10.8493 9.17485 12.5811 11.3273 13.573C11.976 12.3354 11.986 12.3255 12.1257 12.1957C12.245 12.0792 12.3914 11.9945 12.5518 11.9491C12.7122 11.9038 12.8814 11.8994 13.0439 11.9362L19.0319 13.3035C19.1969 13.3418 19.3494 13.4214 19.4751 13.5349C19.6008 13.6484 19.6956 13.792 19.7505 13.9522C19.8347 14.1891 19.8982 14.4329 19.9401 14.6807C19.9803 14.9316 20.0003 15.1852 20 15.4392C19.9816 16.6516 19.4843 17.8074 18.6167 18.6545C17.7491 19.5015 16.5817 19.9709 15.3693 19.9602ZM4.59082 1.99612C3.90344 1.99875 3.24497 2.27298 2.75891 2.75903C2.27286 3.24508 1.99864 3.90355 1.99601 4.59093C1.99865 8.13693 3.40846 11.5369 5.91586 14.0443C8.42326 16.5517 11.8233 17.9615 15.3693 17.9642C16.0566 17.9616 16.7151 17.6873 17.2012 17.2013C17.6872 16.7152 17.9614 16.0567 17.9641 15.3694V15.04L13.3333 13.9722L13.0439 14.5211C12.5948 15.3893 12.2655 16.0181 11.4271 15.6788C9.77333 15.0868 8.27215 14.1339 7.03267 12.8892C5.79318 11.6446 4.84653 10.1394 4.26148 8.48315C3.90219 7.7047 4.58084 7.34542 5.43912 6.89632L5.98802 6.62686L4.92016 1.99612H4.59082Z"/>
+                            </svg>
+                    .col-auto
+                        include ../hamburger/hamburger
+
+            .col-4.header__info.d-none.d-xl-flex.justify-content-center 
                 p Косметология на Коломяжский пр., д. 5/3
                     span Режим работы: пн-пт 09:00-21:00; сб-вс 11:00-20:00
-            .col-5.px-0.header__bottom-menu
+            .col-5.header__bottom-menu.d-none.d-xl-flex.justify-content-end
                 nav
-                    ul.d-flex.justify-content-end
+                    ul.d-flex
                         li.d-flex
                             .hamburger#services
                         li
@@ -47,97 +55,215 @@ header.header.active
                             a(href="#") Отзывы
                         li
                             a(href="#") Врачи
-        .menu-services
-            .container
-                .row 
-                    .col.px-0 
+        .header__mobil-menu
+            include ../search/search
+            nav.header__mobil-menu-list-1
+                ul.header__mobil-menu-main
+                    li(data-id='list' data-list='all').header__mobil-menu-list-item Список услуг
+                    li.header__mobil-menu-list-item
+                        a(href="#") Акции
+                    li.header__mobil-menu-list-item
+                        a(href="#") До\После
+                    li.header__mobil-menu-list-item
+                        a(href="#") Отзывы
+                    li.header__mobil-menu-list-item  
+                        a(href="#") Врачи
+                ul.header__mobil-menu-services
+                    li(data-id="list").header__mobil-menu-list-item Аппаратная косметология
                         ul 
-                            li Аппаратная косметология
-                            li 
+                            li.header__mobil-menu-list-services-item 
                                 a(href="#") Фотоомоложение
-                            li 
+                            li.header__mobil-menu-list-services-item 
                                 a(href="#") Биожени
-                            li
+                            li.header__mobil-menu-list-services-item 
                                 a(href="#") Isoderm
-                            li
+                            li.header__mobil-menu-list-services-item 
                                 a(href="#") Аппаратная подтяжка лица
-                            li
+                            li.header__mobil-menu-list-services-item 
                                 a(href="#") Микродермабразия (Механический пилинг лица)
-                            li
+                            li.header__mobil-menu-list-services-item 
                                 a(href="#") Микротоковая терапия для лица
-                        ul 
-                            li Контурная пластика
-                            li 
+                    li(data-id="list").header__mobil-menu-list-item Контурная пластика
+                        ul
+                            li.header__mobil-menu-list-services-item  
                                 a(href="#") Фотоомоложение
-                            li 
+                            li.header__mobil-menu-list-services-item  
                                 a(href="#") Биожени         
-                            li 
+                            li.header__mobil-menu-list-services-item  
                                 a(href="#") Isoderm
-                            li 
+                            li.header__mobil-menu-list-services-item  
                                 a(href="#") Аппаратная подтяжка лица
-                            li 
+                            li.header__mobil-menu-list-services-item  
                                 a(href="#") Микродермабразия (Механический пилинг лица)
-                            li 
+                            li.header__mobil-menu-list-services-item  
                                 a(href="#") Микротоковая терапия для лица
-                    .col.px-0
+                    li(data-id="list").header__mobil-menu-list-item Лазерные методики
                         ul
-                            li Лазерные методики
-                            li 
+                            li.header__mobil-menu-list-services-item  
                                 a(href="#") Фраксель (Fraxel) 
-                            li 
+                            li.header__mobil-menu-list-services-item   
                                 a(href="#") ДРОТ
-                            li 
+                            li.header__mobil-menu-list-services-item   
                                 a(href="#") Безыгольная биоревитализация
-                            li 
-                                a(href="#") Комбинированная лазеротерапия         
+                            li.header__mobil-menu-list-services-item   
+                                a(href="#") Комбинированная лазеротерапия  
+                    li(data-id="list").header__mobil-menu-list-item Эстестическая косметология
                         ul 
-                            li Эстестическая косметология
-                            li 
+                            li.header__mobil-menu-list-services-item    
                                 a(href="#") Комплексная чистка лица
-                            li 
+                            li.header__mobil-menu-list-services-item    
                                 a(href="#") Ультразвуковой пилинг (Ультразвуковая чистка)
-                            li 
+                            li.header__mobil-menu-list-services-item    
                                 a(href="#") Микротоковая терапия Magic Hands 
-                            li 
+                            li.header__mobil-menu-list-services-item    
                                 a(href="#") Ретиноевый пилинг CIMEL  
-                            li 
+                            li.header__mobil-menu-list-services-item    
                                 a(href="#") Ультразвуковой фонофорез
-                            li 
+                            li.header__mobil-menu-list-services-item    
                                 a(href="#") Пластический массаж лица
-                            li 
+                            li.header__mobil-menu-list-services-item    
                                 a(href="#") Испанский хиромассаж
-                            li 
+                            li.header__mobil-menu-list-services-item   
                                 a(href="#") Энзимный пилинг
-                            li 
+                            li.header__mobil-menu-list-services-item    
                                 a(href="#") Комплексная чистка спины
-                    .col.px-0
+                    li(data-id="list").header__mobil-menu-list-item Нитевой лифтинг
                         ul
-                            li Нитевой лифтинг
-                            li 
+                            li.header__mobil-menu-list-services-item  
                                 a(href="#") Нити Аптос (Aptos)
-                            li 
+                            li.header__mobil-menu-list-services-item  
                                 a(href="#") Итальянские нити Дермафил
-                            li 
+                            li.header__mobil-menu-list-services-item  
                                 a(href="#") Melsmon 3D-мезонити
-                            li 
+                            li.header__mobil-menu-list-services-item  
                                 a(href="#") 3D-мезонити нового поколения (Корея)
-                            li 
+                            li.header__mobil-menu-list-services-item  
                                 a(href="#") Нерассасывающиеся нити Spring Thread
-                            li 
+                            li.header__mobil-menu-list-services-item  
                                 a(href="#") Нити Clovermed (Кловермед)
-                            li 
+                            li.header__mobil-menu-list-services-item  
                                 a(href="#") Нити Резорблифт (Resorblift)
+                    li(data-id="list").header__mobil-menu-list-item Уходовая косметология
                         ul 
-                            li Уходовая косметология
-                            li 
+                            li.header__mobil-menu-list-services-item  
                                 a(href="#") Ретиноевый пилинг CIMEL
-                            li 
+                            li.header__mobil-menu-list-services-item  
                                 a(href="#") Ультразвуковой фонофорез
-                            li 
+                            li.header__mobil-menu-list-services-item  
                                 a(href="#") Пластический массаж лица
-                            li 
+                            li.header__mobil-menu-list-services-item  
                                 a(href="#") Испанский хиромассаж
-                            li 
+                            li.header__mobil-menu-list-services-item  
                                 a(href="#") Энзимный пилинг
-                            li 
+                            li.header__mobil-menu-list-services-item  
                                 a(href="#") Комплексная чистка спины
+            a(href="#enroll") Записаться
+                +icon('arrow-right-long') 
+            nav.header__mobil-menu-list-2 
+                ul 
+                    li 
+                        a(href="#") О нас
+                    li 
+                        a(href="#") Пациентам
+                    li 
+                        a(href="#") Лицензии
+                    li 
+                        a(href="#") Оборудование
+                    li 
+                        a(href="#") Контакты
+            p Косметология<br>на Гаккелевской ул. 33/1
+                span Режим работы: пн-пт 09:00-21:00; сб-вс 11:00-20:00
+            a(href="tel:88002103010") 8 800 210-30-10
+        .menu-services
+            .row 
+                .col
+                    ul 
+                        li Аппаратная косметология
+                        li 
+                            a(href="#") Фотоомоложение
+                        li 
+                            a(href="#") Биожени
+                        li
+                            a(href="#") Isoderm
+                        li
+                            a(href="#") Аппаратная подтяжка лица
+                        li
+                            a(href="#") Микродермабразия (Механический пилинг лица)
+                        li
+                            a(href="#") Микротоковая терапия для лица
+                    ul.mt-5 
+                        li Контурная пластика
+                        li 
+                            a(href="#") Фотоомоложение
+                        li 
+                            a(href="#") Биожени         
+                        li 
+                            a(href="#") Isoderm
+                        li 
+                            a(href="#") Аппаратная подтяжка лица
+                        li 
+                            a(href="#") Микродермабразия (Механический пилинг лица)
+                        li 
+                            a(href="#") Микротоковая терапия для лица
+                .col
+                    ul
+                        li Лазерные методики
+                        li 
+                            a(href="#") Фраксель (Fraxel) 
+                        li 
+                            a(href="#") ДРОТ
+                        li 
+                            a(href="#") Безыгольная биоревитализация
+                        li 
+                            a(href="#") Комбинированная лазеротерапия         
+                    ul.mt-5 
+                        li Эстестическая косметология
+                        li 
+                            a(href="#") Комплексная чистка лица
+                        li 
+                            a(href="#") Ультразвуковой пилинг (Ультразвуковая чистка)
+                        li 
+                            a(href="#") Микротоковая терапия Magic Hands 
+                        li 
+                            a(href="#") Ретиноевый пилинг CIMEL  
+                        li 
+                            a(href="#") Ультразвуковой фонофорез
+                        li 
+                            a(href="#") Пластический массаж лица
+                        li 
+                            a(href="#") Испанский хиромассаж
+                        li 
+                            a(href="#") Энзимный пилинг
+                        li 
+                            a(href="#") Комплексная чистка спины
+                .col
+                    ul
+                        li Нитевой лифтинг
+                        li 
+                            a(href="#") Нити Аптос (Aptos)
+                        li 
+                            a(href="#") Итальянские нити Дермафил
+                        li 
+                            a(href="#") Melsmon 3D-мезонити
+                        li 
+                            a(href="#") 3D-мезонити нового поколения (Корея)
+                        li 
+                            a(href="#") Нерассасывающиеся нити Spring Thread
+                        li 
+                            a(href="#") Нити Clovermed (Кловермед)
+                        li 
+                            a(href="#") Нити Резорблифт (Resorblift)
+                    ul.mt-5 
+                        li Уходовая косметология
+                        li 
+                            a(href="#") Ретиноевый пилинг CIMEL
+                        li 
+                            a(href="#") Ультразвуковой фонофорез
+                        li 
+                            a(href="#") Пластический массаж лица
+                        li 
+                            a(href="#") Испанский хиромассаж
+                        li 
+                            a(href="#") Энзимный пилинг
+                        li 
+                            a(href="#") Комплексная чистка спины
