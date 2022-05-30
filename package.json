@@ -14,7 +14,8 @@
     "lint:scripts": "./node_modules/.bin/eslint src/**/*.js",
     "lintFix:scripts": "./node_modules/.bin/eslint src/**/*.js --fix",
     "zip": "gulp zip:build",
-    "clean": "gulp clean"
+    "clean": "gulp clean",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -29,12 +30,12 @@
   "author": "Zaur Magomedov",
   "license": "ISC",
   "devDependencies": {
-    "@babel/polyfill": "7.4.3",
     "@babel/core": "7.4.3",
     "@babel/plugin-proposal-class-properties": "7.4.0",
     "@babel/plugin-proposal-private-methods": "7.4.3",
     "@babel/plugin-syntax-dynamic-import": "7.2.0",
     "@babel/plugin-transform-runtime": "7.4.3",
+    "@babel/polyfill": "7.4.3",
     "@babel/preset-env": "7.4.3",
     "@babel/runtime": "7.4.3",
     "babel-eslint": "10.0.1",
@@ -77,10 +78,12 @@
   "dependencies": {
     "bootstrap": "latest",
     "enquire.js": "latest",
+    "gh-pages": "^4.0.0",
     "inputmask": "latest",
     "jquery-form-styler": "latest",
     "magnific-popup": "latest",
     "owl.carousel": "latest",
-    "svg4everybody": "latest"
+    "svg4everybody": "latest",
+    "swiper": "^8.1.6"
   }
 }

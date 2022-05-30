@@ -1,0 +1,15 @@
+.actual-action {
+    padding-top: 24px;
+    padding-bottom: 75px;
+    overflow: hidden;
+    @media (min-width: 768px) {
+        padding-top: 73px;
+        padding-bottom: 167px;
+    }
+}
+
+.actual-action__slider {
+    ul {
+        display: flex;
+    }
+}

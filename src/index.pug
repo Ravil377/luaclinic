@@ -32,9 +32,14 @@ block basic-services
     .basic-services 
         .container 
             h2.title Основные услуги 
-            .basic-services__list
-                include ./components/basic-services/basic-services
-                
+            include ./components/basic-services/basic-services
+block actual-action
+    .actual-action
+        .container
+            h2.title Актуальные акции
+            include ./components/actual-action/actual-action
+
+
 //- block menuServices
 //-     .menu-services 
 

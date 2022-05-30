@@ -1,4 +1,38 @@
+@keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
 .card {
+    a {
+        @media (max-width: 768px) {
+            display: flex;  
+            width: 100%;  
+        }
+        
+    }
+    @include transit();
+    &:hover {
+        p {
+            font-weight: 550;
+            font-size: 16px;
+            @media (min-width: 768px) {
+                font-size: 22px;
+            }
+        }
+        img {
+            animation: flash 1.5s;
+        }
+        .circle-btn {
+            background: #D1A788;
+            svg {
+                fill: #fff;
+            }
+        }
+    }
     .image {
         img {
             object-fit: cover;
@@ -6,7 +40,7 @@
             height: 100%;
         }
     }
-    a {
+    .text {
         font-weight: 400;
         font-size: 16px;
         line-height: 130%;
@@ -16,6 +50,9 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @media (min-width: 768px) {
+            font-size: 22px;
+        }
         p {
             margin: 0;
             width: min-content;
@@ -29,5 +66,134 @@
             margin-top: auto;    
             font-size: 22px;
         }
+    }
+}
+.card_allbtn {
+    border: 1px solid #B7B7B7;
+    a {
+        height: 100%;
+        margin: auto;
+        display: flex;
+        cursor: pointer;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 21px 12px 31px;
+        @media (min-width: 768px) {
+            justify-content: center;
+            flex-direction: column;
+        }
+        p {
+            text-align: center;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 130%;
+            letter-spacing: 0.01em;
+            color: #000000;
+            margin: 0;
+            
+            @media (min-width: 768px) {
+                margin-bottom: 16px;
+                font-size: 22px;
+            }
+        }
+        .circle-btn {
+            
+            margin-right: 0;
+            transform: rotate(90deg);
+            @media (min-width: 768px) {
+                margin-top: 0;    
+            }
+        }
+    }
+}
+
+.card.card__slide {
+    &:hover {
+        .text {
+            p {
+                span {
+                    color: #D28EB7;
+                }
+            }
+        }
+        .image {
+            .proposal {
+                &._new {
+                    background: #DCB598;
+                }
+                &._price {
+                    background: #D28EB7;
+                }
+            }
+        }
+    }
+    a {
+        height: fit-content;
+        flex-direction: column;
+        .image {
+            position: relative;
+            height: 209px;
+            margin-bottom: 26px;
+            @media (min-width: 992px) {
+                height: 275px;
+            }
+            .proposal {
+                position: absolute;
+                top: 24px;
+                right: 31px;
+                background: #DCB598;
+                border-radius: 50%;
+                height: 60px;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 130%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                letter-spacing: 0.01em;
+                color: #FFFFFF;
+                @include transit();
+                @media (min-width: 992px) {
+                    top: 32px;
+                    right: 42px;
+                    height: 79px;
+                    font-size: 24px;
+                }
+                &._new {
+                    width: 60px;
+                    background: #D28EB7;
+                    @media (min-width: 992px) {
+                        width: 79px;
+                    }
+                }
+                &._price {
+                    padding: 0 14px;
+                    background: #DCB598;
+                    border-radius: 50px;
+                }
+            }
+        }
+        .text {
+            p {
+                width: 100%;
+                max-width: 100%;
+                span {
+                    @include transit();
+                    display: block;
+                    font-weight: 300;
+                    font-size: 13px;
+                    line-height: 130%;
+                    letter-spacing: 0.01em;
+                    color: #999999;
+                    margin-bottom: 12px;
+                }
+            }
+            .circle-btn {
+                margin-top: 30px;
+            }
+        }
+            
     }
 }
