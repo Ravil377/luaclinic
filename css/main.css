@@ -15402,6 +15402,26 @@ a[href="#consultation"] .icon-arrow-right-long {
     transform: translateX(0) translateY(-50%);
   }
 }
+@keyframes hvr-icon-wobble-vertical {
+  16.65% {
+    transform: translateY(6px) rotate(90deg);
+  }
+  33.3% {
+    transform: translateY(-5px) rotate(90deg);
+  }
+  49.95% {
+    transform: translateY(4px) rotate(90deg);
+  }
+  66.6% {
+    transform: translateY(-2px) rotate(90deg);
+  }
+  83.25% {
+    transform: translateY(1px) rotate(90deg);
+  }
+  100% {
+    transform: translateY(0) rotate(90deg);
+  }
+}
 .circle-btn {
   width: 30px;
   height: 30px;
@@ -15411,6 +15431,7 @@ a[href="#consultation"] .icon-arrow-right-long {
   display: flex;
   align-items: center;
   padding: 0 7px;
+  transition: all 0.24s;
 }
 @media (min-width: 768px) {
   .circle-btn {
@@ -15420,6 +15441,7 @@ a[href="#consultation"] .icon-arrow-right-long {
   }
 }
 .circle-btn svg {
+  transition: all 0.24s;
   fill: #000;
 }
 
@@ -15595,26 +15617,29 @@ a[href="#consultation"] .icon-arrow-right-long {
     padding-bottom: 54px;
   }
 }
-.numbers .numbers__container {
+
+.numbers__container {
   display: flex;
   margin-bottom: 23px;
 }
 @media (min-width: 576px) {
-  .numbers .numbers__container {
+  .numbers__container {
     margin-bottom: 0;
   }
 }
-.numbers .number__image {
+
+.number__image {
   width: 275px;
   height: 334px;
   position: absolute;
   top: -30px;
 }
-.numbers .number__image .icon {
+.number__image .icon {
   width: 100%;
   height: 100%;
 }
-.numbers .number__num {
+
+.number__num {
   font-family: "bebasneue";
   text-transform: uppercase;
   color: #D1A788;
@@ -15627,14 +15652,14 @@ a[href="#consultation"] .icon-arrow-right-long {
   margin-right: 19px;
 }
 @media (min-width: 768px) {
-  .numbers .number__num {
+  .number__num {
     height: 115px;
     min-width: 141px;
     font-size: 9.375rem;
     line-height: 7.125rem;
   }
 }
-.numbers .number__num::before {
+.number__num::before {
   content: "лет";
   position: absolute;
   right: 0;
@@ -15649,13 +15674,14 @@ a[href="#consultation"] .icon-arrow-right-long {
   transform: rotate(-90deg);
 }
 @media (min-width: 768px) {
-  .numbers .number__num::before {
+  .number__num::before {
     font-size: 1.5rem;
     bottom: 10px;
     line-height: 1.5rem;
   }
 }
-.numbers .number__text {
+
+.number__text {
   font-weight: 400;
   font-size: 1rem;
   line-height: 130%;
@@ -15664,12 +15690,12 @@ a[href="#consultation"] .icon-arrow-right-long {
   margin-bottom: 5px;
 }
 @media (min-width: 768px) {
-  .numbers .number__text {
+  .number__text {
     font-size: 1.375rem;
     margin-bottom: 8px;
   }
 }
-.numbers .number__text span {
+.number__text span {
   display: block;
   font-weight: 300;
   font-size: 0.8125rem;
@@ -16207,11 +16233,16 @@ a[href="#consultation"] .icon-arrow-right-long {
 }
 
 .slider-nav {
-  display: flex;
-  position: absolute;
-  right: 0;
-  top: 0;
-  margin: -6px;
+  display: none;
+}
+@media (min-width: 992px) {
+  .slider-nav {
+    display: flex;
+    position: absolute;
+    right: 12px;
+    top: 5px;
+    margin: -6px;
+  }
 }
 
 .slider-nav__btn {
@@ -16239,6 +16270,233 @@ a[href="#consultation"] .icon-arrow-right-long {
 
 .slider-nav__btn_prev {
   transform: scale(-1);
+}
+
+.how {
+  padding-top: 77px;
+  padding-bottom: 77px;
+}
+
+.how__left {
+  padding-top: 100px;
+}
+
+.how__image {
+  position: relative;
+  margin-bottom: 76px;
+}
+.how__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.how__image > a {
+  position: absolute;
+  right: 53px;
+  bottom: 57px;
+  width: 132px;
+  height: 132px;
+}
+.how__image > a svg rect {
+  transition: all 0.24s;
+  fill: white;
+}
+.how__image > a svg path {
+  transition: all 0.24s;
+  fill: #DCB598;
+}
+.how__image > a:hover svg rect {
+  fill: #DCB598;
+}
+.how__image > a:hover svg path {
+  fill: #fff;
+}
+
+.how__question {
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 105%;
+  letter-spacing: 0.01em;
+  color: #000000;
+  margin-bottom: 50px;
+}
+.how__question span {
+  margin-top: 27px;
+  font-weight: 400;
+  font-size: 1.375rem;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+
+.how__btn {
+  transition: all 0.24s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 42px;
+  max-width: 410px;
+  width: 100%;
+  border: 1px solid #000000;
+}
+.how__btn p {
+  margin: 0;
+  font-weight: 550;
+  font-size: 1.125rem;
+  line-height: 110%;
+  color: #000000;
+  transition: all 0.24s;
+}
+.how__btn svg {
+  transition: all 0.24s;
+  fill: #000;
+  transform: rotate(90deg);
+}
+.how__btn:hover {
+  border: 1px solid #D1A788;
+}
+.how__btn:hover p {
+  color: #D1A788;
+}
+.how__btn:hover svg {
+  fill: #D1A788;
+  animation-name: hvr-icon-wobble-vertical;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+.how__decor {
+  position: absolute;
+  left: 133px;
+  width: 666px;
+  height: 707px;
+  bottom: 267px;
+  z-index: -1;
+}
+
+.how__title {
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 105%;
+  letter-spacing: 0.01em;
+  color: #000000;
+  margin-bottom: 31px;
+}
+.how__title span {
+  position: relative;
+}
+.how__title span::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  left: 15px;
+  top: 10px;
+  height: 3px;
+  background: #000000;
+  transform: rotate(-46.99deg);
+}
+
+.how__desc {
+  font-weight: 400;
+  font-size: 1.375rem;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  color: #000000;
+  margin-bottom: 24px;
+}
+
+.how__text {
+  margin-bottom: 64px;
+}
+.how__text p {
+  font-weight: 300;
+  font-size: 1.0625rem;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.how__right .numbers__container {
+  padding-bottom: 56px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid #454545;
+  align-items: center;
+}
+.how__right .numbers__container .number__text {
+  max-width: 220px;
+  font-size: 1.125rem;
+}
+
+.how__more-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 135px;
+  cursor: pointer;
+}
+.how__more-btn:hover p {
+  color: black;
+}
+.how__more-btn:hover .circle-btn {
+  transform: translateX(10px);
+  background-color: #D1A788;
+}
+.how__more-btn:hover .circle-btn svg {
+  fill: #fff;
+}
+.how__more-btn p {
+  transition: all 0.24s;
+  font-weight: 300;
+  font-size: 0.8125rem;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  color: #999999;
+}
+
+.how__quality {
+  justify-content: space-between;
+}
+.how__quality .how__quality-item {
+  border-bottom: 1px solid #E3E3E3;
+  max-width: 287px;
+  width: 100%;
+  margin-bottom: 58px;
+  padding-bottom: 46px;
+  transition: all 0.24s;
+}
+.how__quality .how__quality-item p:first-child {
+  font-family: "bebasneue";
+  font-weight: 400;
+  font-size: 3.125rem;
+  line-height: 3.125rem;
+  text-transform: uppercase;
+  color: #D9D9D9;
+  margin-bottom: 14px;
+}
+.how__quality .how__quality-item p:last-child {
+  margin: 0;
+  font-weight: 400;
+  font-size: 1.375rem;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+.how__quality .how__quality-item p:last-child span {
+  margin-top: 11px;
+  display: block;
+  font-weight: 300;
+  font-size: 1.0625rem;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+.how__quality .how__quality-item:hover p {
+  color: #D1A788;
+}
+.how__quality .how__quality-item:hover p span {
+  color: inherit;
 }
 
 /**
