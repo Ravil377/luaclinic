@@ -1,0 +1,8 @@
+.equipment {
+    padding-bottom: 33px;
+    padding-top: 33px;
+    @media(min-width: 768px) {
+        padding-bottom: 63px;
+        padding-top: 77px;
+    }
+}
