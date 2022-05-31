@@ -16688,6 +16688,17 @@ a[href="#consultation"] .icon-arrow-right-long {
   object-fit: cover;
 }
 
+.equipment {
+  padding-bottom: 33px;
+  padding-top: 33px;
+}
+@media (min-width: 768px) {
+  .equipment {
+    padding-bottom: 63px;
+    padding-top: 77px;
+  }
+}
+
 /**
  * * Vendor styles
  * */
