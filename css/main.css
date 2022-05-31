@@ -15446,11 +15446,12 @@ a[href="#consultation"] .icon-arrow-right-long {
 }
 
 .welcome {
-  height: calc(100vh - 146px);
+  min-height: calc(100vh - 146px);
   z-index: 2;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  padding: 50px 0;
 }
 .welcome .container .welcome__content {
   max-width: 675px;
