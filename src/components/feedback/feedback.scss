@@ -1,5 +1,7 @@
 .feedback {
-    padding-bottom: 66px;
+    @media(min-width: 768px) {
+        padding-bottom: 66px;
+    }
     overflow: hidden;
 }
 .feedback__slider {
