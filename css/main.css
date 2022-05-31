@@ -16649,6 +16649,45 @@ a[href="#consultation"] .icon-arrow-right-long {
   color: inherit;
 }
 
+.interior {
+  overflow-x: hidden;
+  padding-bottom: 52px;
+}
+.interior__slider {
+  position: relative;
+}
+.interior__slider .slider-nav {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  justify-content: space-between;
+}
+.interior ul {
+  height: 283px;
+  display: flex;
+}
+@media (min-width: 992px) {
+  .interior ul {
+    height: 545px;
+  }
+}
+.interior ul li {
+  display: block;
+  height: 100%;
+  max-width: 320px;
+  width: 100%;
+}
+@media (min-width: 576px) {
+  .interior ul li {
+    max-width: 100%;
+  }
+}
+.interior ul li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /**
  * * Vendor styles
  * */
