@@ -1,12 +1,16 @@
+include ../card/card-slide
+include ../slider-navigation/slider-navigation
+
 .actual-action__slider 
     ul.actual-action__wrapper.swiper-wrapper
         li.swiper-slide.col-xl-4.col-md-6.col-12
-            include ../card/card-slide
+            +cardslide('Уходовая косметология доступна', 'photo1.jpg', '', 'new')
         li.swiper-slide.col-xl-4.col-md-6.col-12
-            include ../card/card-slide
+            +cardslide('Лето - лазерная эпиляция со скидкой 10%', 'photo2.jpg', '20 000р')
         li.swiper-slide.col-xl-4.col-md-6.col-12
-            include ../card/card-slide
+            +cardslide('Дарим скидки именинникам до 20%', 'photo3.jpg', '', '20%')
         li.swiper-slide.col-xl-4.col-md-6.col-12
-            include ../card/card-slide
+            +cardslide('На все услуги косметолгии в апреле -23%', 'photo4.jpg', '', '23%')
         li.swiper-slide.col-xl-4.col-md-6.col-12
-            include ../card/card-slide
+            +cardslide('На все услуги косметолгии в апреле -23%', 'photo5.jpg', '', '23%')
+    +slider-navigation('basic')

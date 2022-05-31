@@ -1,0 +1,39 @@
+.slider-nav__container {
+    position: relative;
+}
+.slider-nav {
+    display: none;
+
+    @media (min-width: 992px) {
+        display: flex;
+        position: absolute;
+        right: 12px;
+        top: 5px;
+        margin: -6px;
+    }
+}
+.slider-nav__btn {
+    display: flex;
+    width: 56px;
+    height: 56px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    margin: 6px;
+    @include transit();
+    cursor: pointer;
+    &:hover {
+        background: $button-bg;
+        svg {
+            fill: #fff;
+        }    
+    }
+    svg {
+        width: 7px;
+        height: 14px;
+        margin: auto;
+        fill: #000;
+    }
+}
+.slider-nav__btn_prev {
+    transform: scale(-1);
+}

@@ -1,4 +1,5 @@
 include ../../components/card/card-feedback
+include ../slider-navigation/slider-navigation
 
 .feedback__slider 
     ul.feedback__slider__wrapper.swiper-wrapper
@@ -10,4 +11,4 @@ include ../../components/card/card-feedback
             +card-feedback('Оксана, Санкт-Петербург', 'Тертычный говорит об аналитических жанрах следующее: «Одной из наиболее примечательных черт отечественных ...')
         li.swiper-slide.col-xl-4.col-md-6.col-12
             +card-feedback-all()
-            
+    +slider-navigation('feedback')

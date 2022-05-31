@@ -30,12 +30,12 @@ block numbers
                         +icon('flower')
 block basic-services
     section.basic-services 
-        .container 
-            h2.title Основные услуги 
+        .container
+            h2.title Основные услуги
             include ./components/basic-services/basic-services
 block actual-action
     section.actual-action
-        .container
+        .container.slider-nav__container
             h2.title Актуальные акции
             include ./components/actual-action/actual-action
 block consultation
@@ -62,44 +62,6 @@ block consultation
                         | Отправляя запрос Вы соглашаетесь на обработку персональных данных. Данные не передаются третьим лицам
 block feedback 
     section.feedback
-        .container 
+        .container.slider-nav__container 
             h2.title Отзывы клиентов
             include ./components/feedback/feedback
-//- block menuServices
-//-     .menu-services 
-
-//- block top-position
-//-     section.top-position.mb-5
-//-         .module
-//-             .container
-//-                 .module__title Модуль в позиции TOP
-
-//- block columns
-//-     main.content--right.col-lg-9
-//-         article.page.textblock
-//-             h1.mb-5 !{title}
-
-//-             p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, praesentium.
-//-             p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid consectetur consequatur deserunt dolores est ex fugit non odit reprehenderit! Animi commodi itaque magnam maxime nam obcaecati quis quos repudiandae.
-//-             p
-//-                 // Подключение svg иконок
-//-                 +icon("arrow-up")
-//-             p
-//-                 img.img-fluid(src="./images/no-foto.webp" alt="")
-
-//-         //-pagination
-//-         .pagination.mt-30
-//-             include ./components/pagination/pagination
-
-//-     //- Include sidebar
-//-     include ./components/sidebar/sidebar--left
-
-
-//- block bottom-position
-//-     section.bottom-position.mt-5
-//-         .module
-//-             .container
-//-                 .module__title Модуль в позиции BOTTOM
-
-
-
