@@ -12,25 +12,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
 
 swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation]);
-var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.actual-action__slider', {
-  slidesPerView: 1,
-  spaceBetween: 10,
-  loop: true,
-  breakpoints: {
-    576: {
-      slidesPerView: 2,
-      spaceBetween: 20
+var swiperAction = '.actual-action__slider';
+
+if (document.querySelector(swiperAction)) {
+  var actionSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](swiperAction, {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    loop: true,
+    breakpoints: {
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 30
+      }
     },
-    1200: {
-      slidesPerView: 3,
-      spaceBetween: 30
+    navigation: {
+      nextEl: '.slider-nav-basic__next-btn-js',
+      prevEl: '.slider-nav-basic__prev-btn-js'
     }
-  },
-  navigation: {
-    nextEl: '.slider-nav-basic__next-btn-js',
-    prevEl: '.slider-nav-basic__prev-btn-js'
-  }
-});
+  });
+}
 
 /***/ }),
 
@@ -66,21 +70,30 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
 
-var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.feedback__slider', {
-  slidesPerView: 1,
-  spaceBetween: 10,
-  loop: true,
-  breakpoints: {
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 20
+swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation]);
+var swiperFeedback = '.feedback__slider';
+
+if (document.querySelector(swiperFeedback)) {
+  var feedbackSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](swiperFeedback, {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    loop: true,
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 30
+      }
     },
-    1200: {
-      slidesPerView: 3,
-      spaceBetween: 30
+    navigation: {
+      nextEl: '.slider-nav-feedback__next-btn-js',
+      prevEl: '.slider-nav-feedback__prev-btn-js'
     }
-  }
-});
+  });
+}
 
 /***/ }),
 
