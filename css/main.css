@@ -15464,13 +15464,35 @@ a[href="#consultation"] .icon-arrow-right-long {
   }
 }
 .welcome .container .welcome__content h1, .welcome .container .welcome__content .h1 {
+  font-size: 2.0625rem;
   font-weight: 400;
   line-height: 105%;
   color: #FFFFFF;
   margin: 0;
   text-align: center;
 }
-@media (min-width: 992px) {
+.welcome .container .welcome__content h1 span, .welcome .container .welcome__content .h1 span {
+  position: relative;
+}
+.welcome .container .welcome__content h1 span::after, .welcome .container .welcome__content .h1 span::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  left: 6px;
+  top: 6px;
+  height: 2px;
+  background: #fff;
+  transform: rotate(-46.99deg);
+}
+@media (min-width: 768px) {
+  .welcome .container .welcome__content h1 span::after, .welcome .container .welcome__content .h1 span::after {
+    width: 18px;
+    left: 22px;
+    top: 20px;
+    height: 6px;
+  }
+}
+@media (min-width: 768px) {
   .welcome .container .welcome__content h1, .welcome .container .welcome__content .h1 {
     font-size: 6.25rem;
     text-align: left;
