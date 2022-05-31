@@ -60,7 +60,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var inputmask__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! inputmask */ "./node_modules/inputmask/dist/inputmask.js");
 /* harmony import */ var inputmask__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(inputmask__WEBPACK_IMPORTED_MODULE_0__);
 
-var $phoneMask = document.querySelector('.phone-mask--js');
+var $phoneMask = document.querySelector('#phone');
 
 if ($phoneMask) {
   inputmask__WEBPACK_IMPORTED_MODULE_0___default()({
