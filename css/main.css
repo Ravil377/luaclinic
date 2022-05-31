@@ -15587,6 +15587,7 @@ a[href="#consultation"] .icon-arrow-right-long {
 .numbers {
   padding-top: 25px;
   padding-bottom: 27px;
+  background: #F6F6F6;
 }
 @media (min-width: 768px) {
   .numbers {
@@ -16081,6 +16082,7 @@ a[href="#consultation"] .icon-arrow-right-long {
   padding-top: 24px;
   padding-bottom: 75px;
   overflow: hidden;
+  background: #F6F6F6;
 }
 @media (min-width: 768px) {
   .actual-action {
@@ -16198,6 +16200,45 @@ a[href="#consultation"] .icon-arrow-right-long {
 .feedback__slider ul {
   display: flex;
   min-height: 344px;
+}
+
+.slider-nav__container {
+  position: relative;
+}
+
+.slider-nav {
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: -6px;
+}
+
+.slider-nav__btn {
+  display: flex;
+  width: 56px;
+  height: 56px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  margin: 6px;
+  transition: all 0.24s;
+  cursor: pointer;
+}
+.slider-nav__btn:hover {
+  background: #D1A788;
+}
+.slider-nav__btn:hover svg {
+  fill: #fff;
+}
+.slider-nav__btn svg {
+  width: 7px;
+  height: 14px;
+  margin: auto;
+  fill: #000;
+}
+
+.slider-nav__btn_prev {
+  transform: scale(-1);
 }
 
 /**
