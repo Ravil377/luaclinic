@@ -8,3 +8,14 @@
         font-size: 64px;
     }
 }
+
+.subtitle {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 130%;
+    letter-spacing: 0.01em;
+    color: #000000;
+    @media (min-width: 768px) {
+        font-size: 22px;
+    }   
+}

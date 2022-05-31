@@ -29,17 +29,37 @@ block numbers
                     .number__image
                         +icon('flower')
 block basic-services
-    .basic-services 
+    section.basic-services 
         .container 
             h2.title Основные услуги 
             include ./components/basic-services/basic-services
 block actual-action
-    .actual-action
+    section.actual-action
         .container
             h2.title Актуальные акции
             include ./components/actual-action/actual-action
-
-
+block consultation
+    section.consultation
+        .container
+            h2.title Запишитесь на&nbsp;консультацию!
+            p.subtitle Если возникли вопросы, мы с радостью, и в самые короткие сроки на них ответим!
+            form(action='#').form
+                .row
+                    .form__input-container.col-xl-4.col-md-6.col-12
+                        .form__placeholder-container
+                            input(type="text" placeholder=" " required)
+                            label Ваше имя
+                        |  Пожалуйста, представьтесь, как к Вам обращаться
+                    .form__input-container.col-xl-4.col-md-6.col-12.mt-md-0.mt-20
+                        .form__placeholder-container
+                            input(type="tel" placeholder=" " required)#phone
+                            label Номер телефона
+                            +icon('flag')
+                        | Никакой рекламы и спама
+                    .form__button-container.col-xl-4.col-12.mt-xl-0.mt-20
+                        button(type="submit") Получить консультацию
+                            +icon('arrow-right-long')
+                        | Отправляя запрос Вы соглашаетесь на обработку персональных данных. Данные не передаются третьим лицам
 //- block menuServices
 //-     .menu-services 
 

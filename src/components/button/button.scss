@@ -1,5 +1,6 @@
 a[href="#enroll"],
-a[href="#consultation"] {
+a[href="#consultation"],
+button[type='submit'] {
     display: block;
     font-weight: 550;
     font-size: 17px;
@@ -26,6 +27,32 @@ a[href="#consultation"] {
             animation-duration: 1s;
             animation-timing-function: ease-in-out;
             animation-iteration-count: 1;
+        }
+    }
+}
+
+button[type='submit'] {
+    justify-content: space-between;
+    display: flex;
+    border: 1px solid $button-bg;
+    padding: 16px 25px 16px 30px;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 7px;
+    font-size: 16px;
+    @media (min-width: 576px) {
+        padding: 21px 38px;    
+        font-size: 17px;
+    }
+    .icon-arrow-right-long {
+        width: 45px;
+        @media (min-width: 576px) {
+            width: 69px;
+        }
+    }
+    &:hover {
+        .icon-arrow-right-long {
+            animation-name: hvr-icon-wobble-horizontal1;
         }
     }
 }

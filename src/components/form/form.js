@@ -1,5 +1,5 @@
 import inputmask from 'inputmask'
-const $phoneMask = document.querySelector('.phone-mask--js')
+const $phoneMask = document.querySelector('#phone')
 
 if ($phoneMask) {
 	inputmask({
