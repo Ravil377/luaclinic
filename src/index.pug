@@ -1,4 +1,5 @@
 extends base/pug/base
+include ./components/slider-navigation/slider-navigation
 
 append variables
     - var title = 'Главная страница сайта'
@@ -9,7 +10,7 @@ block welcome
     section.welcome
         .container
             .welcome__content
-                h1 LuA.Clinic косметология для тебя
+                h1 L<span>u</span>A.Clinic косметология для тебя
                 p — наука, изучающая эстетические проблемы организма человека, их этиологии, проявления и методы коррекции, также свод методик, направленных
                 a(href='#consultation') Консультация
                     +icon('arrow-right-long')
@@ -132,3 +133,18 @@ block how
                         <svg width="19" height="8" viewBox="0 0 19 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M18.0293 4.49229C18.2246 4.29702 18.2246 3.98044 18.0293 3.78518L14.8473 0.603199C14.652 0.407937 14.3355 0.407937 14.1402 0.603199C13.9449 0.798461 13.9449 1.11504 14.1402 1.31031L16.9686 4.13873L14.1402 6.96716C13.9449 7.16242 13.9449 7.479 14.1402 7.67427C14.3355 7.86953 14.652 7.86953 14.8473 7.67427L18.0293 4.49229ZM0.990967 4.63873H17.6757V3.63873H0.990967V4.63873Z"/>
                         </svg>
+block interior
+    section.interior 
+        .container
+            h2.title Наш интерьер
+            .interior__slider 
+                ul.interior__wrapper.swiper-wrapper
+                    li.col-6.swiper-slide
+                        img(src='./images/interior/photo1.jpg' alt='Интерьер')
+                    li.col-6.swiper-slide
+                        img(src='./images/interior/photo2.jpg' alt='Интерьер')
+                    li.col-6.swiper-slide
+                        img(src='./images/interior/photo3.jpg' alt='Интерьер')
+                    li.col-6.swiper-slide
+                        img(src='./images/interior/photo4.jpg' alt='Интерьер')
+                +slider-navigation('interior')
