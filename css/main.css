@@ -14349,6 +14349,10 @@ textarea.form-control-lg {
   width: 1em;
 }
 
+.icon-blockquote {
+  width: 1.1666666667em;
+}
+
 .icon-flag {
   width: 1em;
 }
@@ -15943,12 +15947,128 @@ a[href="#consultation"] .icon-arrow-right-long {
   margin-top: 30px;
 }
 
+.card-feedback {
+  padding: 39px 28px 48px 27px;
+  height: 100%;
+  background: #F7F7F7;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 992px) {
+  .card-feedback {
+    padding: 33px 30px 30px 59px;
+  }
+}
+.card-feedback .circle-btn {
+  transition: all 0.24s;
+}
+.card-feedback .num {
+  font-weight: 400;
+  font-size: 3.125rem;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+.card-feedback .desc {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  color: #FFFFFF;
+  margin-bottom: 22px;
+}
+.card-feedback > p {
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+.card-feedback blockquote {
+  padding-left: 44px;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  color: #000000;
+  position: relative;
+}
+.card-feedback blockquote::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='21' height='18' viewBox='0 0 21 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.65 17.4965V10.3398H16.8284C16.9674 7.28256 17.5928 4.85066 20.65 3.53049V0.195312C15.0914 1.79342 13.1459 6.51824 13.1459 11.8684V17.4965H20.65ZM8.00414 17.4965V10.3398H4.18259C4.32155 7.28256 4.9469 4.85066 8.00414 3.53049V0.195312C2.44552 1.79342 0.5 6.51824 0.5 11.8684V17.4965H8.00414Z' fill='black'/%3E%3C/svg%3E%0A");
+  width: 20px;
+  height: 17px;
+}
+.card-feedback > a {
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  transition: all 0.24s;
+}
+.card-feedback > a:hover p {
+  color: #000;
+}
+.card-feedback > a:hover .circle-btn {
+  transform: translateX(10px);
+  background: #DCB598;
+}
+.card-feedback > a:hover .circle-btn svg {
+  fill: #fff;
+}
+.card-feedback > a > p {
+  margin: 0;
+  max-width: 140px;
+  font-weight: 300;
+  font-size: 0.8125rem;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  color: #999999;
+}
+
+.card-feedback_bg {
+  background: #DCB598;
+}
+.card-feedback_bg .circle-btn {
+  transition: all 0.24s;
+}
+.card-feedback_bg .circle-btn:hover {
+  transform: translateX(10px);
+}
+.card-feedback_bg .circle-btn svg {
+  fill: white;
+}
+.card-feedback_bg a {
+  width: fit-content;
+}
+
+.card-feedback__top {
+  margin-bottom: 22px;
+  display: flex;
+}
+.card-feedback__top img:nth-child(2) {
+  transform: translateX(-15px);
+}
+.card-feedback__top img:nth-child(3) {
+  transform: translateX(-30px);
+}
+.card-feedback__top img:nth-child(4) {
+  transform: translateX(-45px);
+}
+
 .consultation {
   padding-top: 80px;
   padding-bottom: 54px;
   border-bottom: 1px solid #454545;
   max-width: 1290px;
   margin: 0 auto;
+  margin-bottom: 80px;
 }
 .consultation .subtitle {
   margin-bottom: 43px;
@@ -16068,6 +16188,16 @@ a[href="#consultation"] .icon-arrow-right-long {
   .form__button-container {
     text-align: left;
   }
+}
+
+.feedback {
+  padding-bottom: 66px;
+  overflow: hidden;
+}
+
+.feedback__slider ul {
+  display: flex;
+  min-height: 344px;
 }
 
 /**
