@@ -39,7 +39,7 @@ block actual-action
             h2.title Актуальные акции
             include ./components/actual-action/actual-action
 block consultation
-    section.consultation
+    section.consultation#enroll
         .container
             h2.title Запишитесь на&nbsp;консультацию!
             p.subtitle Если возникли вопросы, мы с радостью, и в самые короткие сроки на них ответим!
@@ -60,6 +60,11 @@ block consultation
                         button(type="submit") Получить консультацию
                             +icon('arrow-right-long')
                         | Отправляя запрос Вы соглашаетесь на обработку персональных данных. Данные не передаются третьим лицам
+block feedback 
+    section.feedback
+        .container 
+            h2.title Отзывы клиентов
+            include ./components/feedback/feedback
 //- block menuServices
 //-     .menu-services 
 
