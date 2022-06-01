@@ -16797,7 +16797,13 @@ a[href="#consultation"] .icon-arrow-right-long {
 
 .certificates__list {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  margin: -5px;
+}
+@media (min-width: 768px) {
+  .certificates__list {
+    margin: 0;
+  }
 }
 
 .certificates__item {
@@ -16805,11 +16811,18 @@ a[href="#consultation"] .icon-arrow-right-long {
   justify-content: center;
   align-items: center;
   background: #F6F6F6;
-  min-height: 397px;
-  height: 1px;
-  padding: 11px 22px;
-  max-width: 298px;
+  margin: 5px;
+  padding: 11px;
   width: 100%;
+}
+@media (min-width: 768px) {
+  .certificates__item {
+    margin: 0;
+    padding: 11px 22px;
+    min-height: 397px;
+    height: 1px;
+    max-width: 290px;
+  }
 }
 .certificates__item img {
   object-fit: contain;
@@ -16819,6 +16832,171 @@ a[href="#consultation"] .icon-arrow-right-long {
   border: none;
   width: 100%;
   height: 100%;
+}
+
+@media (max-width: 1200px) {
+  .certificates__item_btn {
+    max-width: 100%;
+    min-height: unset;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.certificates .container > a {
+  display: flex;
+  align-items: center;
+  margin-top: 21px;
+  border: 1px solid #B7B7B7;
+  padding: 12px 31px;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  color: #000000;
+  transition: all 0.24s;
+}
+.certificates .container > a:hover {
+  color: #D1A788;
+  border: 1px solid #D1A788;
+}
+.certificates .container > a:hover .circle-btn {
+  transform: translateX(10px);
+  background: #DCB598;
+}
+.certificates .container > a:hover .circle-btn svg {
+  fill: #fff;
+}
+@media (min-width: 768px) {
+  .certificates .container > a {
+    font-size: 1.375rem;
+  }
+}
+
+.banner {
+  overflow-x: hidden;
+  margin-top: 50px;
+  margin-bottom: 55px;
+  background: #DCB598;
+  z-index: 1;
+}
+@media (min-width: 768px) {
+  .banner {
+    overflow-x: unset;
+    margin-top: 132px;
+  }
+}
+.banner__container {
+  padding-top: 53px;
+  padding-bottom: 76px;
+}
+.banner__decor {
+  fill: rgb(214, 167, 132);
+  position: absolute;
+  left: -51px;
+  bottom: 53px;
+  transform: rotate(-34.4deg);
+  z-index: -1;
+  width: 125%;
+  height: 125%;
+}
+@media (min-width: 992px) {
+  .banner__decor {
+    width: 527px;
+    height: 559px;
+  }
+}
+.banner .banner__left {
+  position: relative;
+  max-width: 420px;
+  width: 100%;
+  z-index: 2;
+}
+.banner .banner__left .banner__images {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .banner .banner__left .banner__images {
+    top: -45px;
+    height: 438px;
+    position: absolute;
+  }
+}
+.banner .banner__left .banner__images img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.banner .banner__right {
+  z-index: 2;
+  max-width: 500px;
+  width: 100%;
+}
+.banner p {
+  font-weight: 400;
+  font-size: 1.6875rem;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #FFFFFF;
+  margin: 0;
+}
+@media (min-width: 992px) {
+  .banner p {
+    font-size: 2.5rem;
+    text-align: left;
+  }
+}
+.banner p span {
+  display: block;
+  margin-top: 12px;
+  font-size: 1rem;
+  line-height: 130%;
+}
+@media (min-width: 992px) {
+  .banner p span {
+    margin-top: 16px;
+  }
+}
+.banner a {
+  margin: 0 auto;
+  margin-top: 42px;
+  font-weight: 550;
+  font-size: 1rem;
+  line-height: 110%;
+  color: #000000;
+  padding: 16px 41px;
+  max-width: 330px;
+  width: 100%;
+  background: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.24s;
+}
+@media (min-width: 992px) {
+  .banner a {
+    margin: 0;
+    text-align: center;
+    margin-top: 29px;
+    font-size: 1.125rem;
+    padding: 25px 42px;
+  }
+}
+.banner a:hover {
+  color: #D1A788;
+}
+.banner a:hover svg {
+  fill: #D1A788;
+  animation-name: hvr-icon-wobble-horizontal1;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+.banner a svg {
+  transition: all 0.24s;
+  fill: black;
+  width: 50px;
 }
 
 /**
