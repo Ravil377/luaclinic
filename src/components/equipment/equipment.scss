@@ -1,8 +1,11 @@
 .equipment {
     padding-bottom: 33px;
-    padding-top: 33px;
+    padding-top: 77px;
+    overflow-x: hidden;
     @media(min-width: 768px) {
         padding-bottom: 63px;
-        padding-top: 77px;
+    }
+    .how__decor {
+        bottom: -15%;
     }
 }

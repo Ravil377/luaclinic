@@ -1,0 +1,35 @@
+include ../slider-navigation/slider-navigation
+
+.doctors__slider 
+    ul.doctors__wrapper.swiper-wrapper
+        li.swiper-slide
+            .doctors__images 
+                img(src="./images/doctors/photo1.png" alt="Корнилова Инесса Всеволодовна")
+                span опыт работы более 10 лет
+            p Корнилова Инесса<br>Всеволодовна
+            span 25 лет. Косметолог
+        li.swiper-slide
+            .doctors__images 
+                img(src="./images/doctors/photo2.png" alt="Суханова Ветта Яковлевна")
+                span опыт работы более 3 года
+            p Суханова Ветта<br>Яковлевна
+            span 30 лет. Косметолог
+        li.swiper-slide
+            .doctors__images 
+                img(src="./images/doctors/photo3.png" alt="Корнилова Инесса Всеволодовна")
+                span опыт работы более 3 года
+            p Корнилова Инесса<br>Всеволодовна
+            span 25 лет. Косметолог
+        li.swiper-slide
+            .doctors__images 
+                img(src="./images/doctors/photo4.png" alt="Корнилова Инесса")
+                span опыт работы более 2 лет
+            p Крылова Христина<br>Андреевна
+            span 27 лет. Косметолог
+        li.swiper-slide
+            .doctors__images 
+                img(src="./images/doctors/photo5.png" alt="Корнилова Инесса")
+                span опыт работы более 10 лет
+            p Суханова Ветта<br>Яковлевна
+            span 27 лет. Косметолог
+    +slider-navigation('doctors')
