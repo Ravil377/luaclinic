@@ -16625,6 +16625,7 @@ a[href="#consultation"] .icon-arrow-right-long {
 }
 @media (min-width: 576px) {
   .how__quality .how__quality-item p:last-child {
+    padding-left: 0;
     font-size: 1.375rem;
   }
 }
@@ -16792,6 +16793,32 @@ a[href="#consultation"] .icon-arrow-right-long {
     padding-top: 18px;
     font-size: 1.0625rem;
   }
+}
+
+.certificates__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.certificates__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #F6F6F6;
+  min-height: 397px;
+  height: 1px;
+  padding: 11px 22px;
+  max-width: 298px;
+  width: 100%;
+}
+.certificates__item img {
+  object-fit: contain;
+  width: 100%;
+}
+.certificates__item .card_allbtn {
+  border: none;
+  width: 100%;
+  height: 100%;
 }
 
 /**
