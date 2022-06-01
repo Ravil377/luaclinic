@@ -52,6 +52,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actual_action_actual_action__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./actual-action/actual-action */ "./src/components/actual-action/actual-action.js");
 /* harmony import */ var _feedback_feedback__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./feedback/feedback */ "./src/components/feedback/feedback.js");
 /* harmony import */ var _interior_interior__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./interior/interior */ "./src/components/interior/interior.js");
+/* harmony import */ var _doctors_doctors__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./doctors/doctors */ "./src/components/doctors/doctors.js");
 // Form
  // Hamburger
 
@@ -59,6 +60,39 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+/***/ }),
+
+/***/ "./src/components/doctors/doctors.js":
+/*!*******************************************!*\
+  !*** ./src/components/doctors/doctors.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
+
+swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation]);
+var swiperDoctors = '.doctors__slider';
+
+if (document.querySelector(swiperDoctors)) {
+  var doctorsSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](swiperDoctors, {
+    slidesPerView: 'auto',
+    spaceBetween: 10,
+    loop: true,
+    breakpoints: {
+      768: {
+        spaceBetween: 30
+      }
+    },
+    navigation: {
+      nextEl: '.slider-nav-doctors__next-btn-js',
+      prevEl: '.slider-nav-doctors__prev-btn-js'
+    }
+  });
+}
 
 /***/ }),
 

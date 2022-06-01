@@ -16651,7 +16651,6 @@ a[href="#consultation"] .icon-arrow-right-long {
 
 .interior {
   overflow-x: hidden;
-  padding-bottom: 52px;
 }
 .interior__slider {
   position: relative;
@@ -16690,12 +16689,108 @@ a[href="#consultation"] .icon-arrow-right-long {
 
 .equipment {
   padding-bottom: 33px;
-  padding-top: 33px;
+  padding-top: 77px;
+  overflow-x: hidden;
 }
 @media (min-width: 768px) {
   .equipment {
     padding-bottom: 63px;
-    padding-top: 77px;
+  }
+}
+.equipment .how__decor {
+  bottom: -15%;
+}
+
+.doctors {
+  overflow: hidden;
+}
+.doctors ul {
+  display: flex;
+  padding-bottom: 39px;
+}
+.doctors ul li {
+  display: flex;
+  flex-direction: column;
+  min-width: 218px;
+  min-height: 331px;
+  height: auto;
+}
+@media (min-width: 768px) {
+  .doctors ul li {
+    min-width: 300px;
+    min-height: 455px;
+  }
+}
+.doctors ul li .doctors__images {
+  background: #F6F6F6;
+  height: 248px;
+  width: 100%;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .doctors ul li .doctors__images {
+    height: 333px;
+  }
+}
+.doctors ul li .doctors__images img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.doctors ul li .doctors__images span {
+  padding: 6px 16px;
+  background: #FFFFFF;
+  border-radius: 80px;
+  position: absolute;
+  bottom: 15px;
+  right: 17px;
+  font-weight: 300;
+  font-size: 0.625rem;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  color: #999999;
+}
+@media (min-width: 768px) {
+  .doctors ul li .doctors__images span {
+    font-size: 0.75rem;
+    bottom: 21px;
+    right: 24px;
+  }
+}
+.doctors p {
+  margin: 0;
+  margin-top: 17px;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+@media (min-width: 768px) {
+  .doctors p {
+    font-size: 1.375rem;
+    margin-top: 24px;
+  }
+}
+.doctors span {
+  padding-top: 12px;
+  display: block;
+  margin-top: auto;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  color: #D1A788;
+}
+@media (min-width: 768px) {
+  .doctors span {
+    padding-top: 18px;
+    font-size: 1.0625rem;
   }
 }
 
