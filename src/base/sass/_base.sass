@@ -28,7 +28,37 @@ body
 		.wrapper__content.wrapper__content_bg
 			&:after 
 				background: unset
-
+	&.servies
+		.logo-svg
+			fill: #000
+		.header__mobil
+			a
+				svg
+					fill: #000
+		.hamburger 
+			&::after,
+			&::before
+				background: #000
+		.header__top 
+			nav ul li
+				a
+					color: #626262
+			.search-btn
+				svg
+					fill: #000
+		.header__top-right 
+			a
+				color: #000
+		a[href="#enroll"]
+			color: #fff
+		.header__info 
+			p
+				color: #000000
+		.header__bottom-menu 
+			ul
+				li
+					& > a
+						color: #000000
 @keyframes fadeIn
 	from
 		opacity: 0

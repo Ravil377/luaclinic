@@ -15,19 +15,23 @@ html(lang="ru")
                 include ../../components/header/header
 
                 if (pageClass !== 'homepage')
-                    nav.breadcrumbs.mb-sm-30
-                        .container
-                            ul.breadcrumbs__list
+                    nav.breadcrumbs
+                        .container.d-flex.justify-content-between.breadcrumbs__container
+                            ul.breadcrumbs__list.d-md-flex.d-none
                                 li
                                     a(href="/") Главная
-                                    span.breadcrumbs__divider /
-
+                                    span.breadcrumbs__divider \
+                                li
+                                    a(href="/") Категория
+                                    span.breadcrumbs__divider \
                                 li.is-active #{title}
+                            a(href="#") Вернуться назад
                 block welcome
                 block menuServices
             .wrapper__content
                 block numbers
                 block basic-services
+                block equipment1
                 block actual-action
                 block consultation
                 block feedback
