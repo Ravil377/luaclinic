@@ -185,3 +185,43 @@ block certificates
             include ./components/certificates/certificates
 block banner 
     include ./components/banner/banner
+block free-consultation 
+    include ./components/free-consultation/free-consultation 
+block contacts
+    section.contacts
+        .contacts__map#map
+            script(src='https://api-maps.yandex.ru/2.1/?apikey=2b90f566-9d11-4942-83ed-b125969f1147&lang=ru_RU')
+        .container
+            .contacts__content
+                .row.justify-content-between 
+                    .col-lg-4.col-12 
+                        h2.title Контактные данные
+                    .col-lg-6.col-12.mt-lg-0.mt-15
+                        .row 
+                            .col-lg.col-12.contacts__left.flex-lg-column.flex-sm-row.flex-column
+                                p.d-block Звоните по всем вопросам
+                                    a(href="tel:88002103010") 8 800 210-30-10
+                                p.d-sm-none.d-block.mt-10 Адрес Lua Clinic
+                                    a(href="#") Санкт Петербург, Коломяжский пр., д.5/3
+                                a(href="https://yandex.ru/maps/?ll=59.99,30.30&z=12").mt-10.d-sm-none.d-block
+                                    +icon('nav')
+                                    | построить маршрут
+                                p.d-block.mt-sm-0.mt-20 Электронный адрес
+                                    a(href="mailto:info@lua.clinic") info@lua.clinic
+                            .col-lg.col-12.flex-lg-column.flex-row.mt-lg-0.mt-15
+                                p.d-sm-block.d-none Адрес Lua Clinic
+                                    a(href="#") Санкт Петербург, Коломяжский пр., д.5/3
+                                a(href="https://yandex.ru/maps/?ll=59.99,30.30&z=12").mt-10.d-sm-block.d-none
+                                    +icon('nav')
+                                    | построить маршрут
+                                .social__container.d-flex.flex-lg-column.flex-row.align-items-lg-start.mt-lg-0.mt-20.align-items-center
+                                    p.mt-lg-25.mt-0 Социальные сети
+                                    .contacts__social.d-flex
+                                        a(href="#")
+                                            +icon('vk')
+                                        a(href="#")
+                                            +icon('telegram')
+                                        a(href="#")
+                                            +icon('inst')
+block menu 
+    include ./components/menu/menu

@@ -8,3 +8,6 @@ import './actual-action/actual-action'
 import './feedback/feedback'
 import './interior/interior'
 import './doctors/doctors'
+import './contacts/contacts'
+import './menu/menu'
+

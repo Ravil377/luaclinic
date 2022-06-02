@@ -1,0 +1,23 @@
+section.free-consultation
+    .container
+        .row.justify-content-center
+            .col-xl-5.col-lg-12.free-consultation__left
+                h2.title Бесплатная консультация
+                p Если возникли вопросы, мы с радостью, и в самые короткие сроки на них ответим!
+                    span Пожалуйста, заполните форму, мы перезвоним и проконсультируем по всем интересующим вопросам
+            .col-xl-6.col-lg-8.col-12.free-consultation__right.mt-xl-0.mt-50
+                .form__input-container
+                    .form__placeholder-container
+                        input(type="text" placeholder=" " required)
+                        label Ваше имя
+                    |  Пожалуйста, представьтесь, как к Вам обращаться
+                .form__input-container.mt-20
+                    .form__placeholder-container
+                        input(type="tel" placeholder=" " required)#phone
+                        label Номер телефона
+                        +icon('flag')
+                    | Никакой рекламы и спама
+                .form__button-container.mt-20
+                    button(type="submit") Получить консультацию
+                        +icon('arrow-right-long')
+                    | Отправляя запрос Вы соглашаетесь на обработку персональных данных. Данные не передаются третьим лицам
