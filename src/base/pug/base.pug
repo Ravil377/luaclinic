@@ -40,22 +40,15 @@ html(lang="ru")
                 block free-consultation
                 block contacts
                 block menu
-                //- block top-position
-
-                //- .container
-                //-     .row
-                //-         block columns
-
-                //- block bottom-position
 
             //- Include footer
             include ../../components/footer/footer
 
-        //- Include callback
-        include ../../components/form/form--callback
+        //- //- Include callback
+        //- include ../../components/form/form--callback
 
         a.go-top.go-top--js(href='#')
-            +icon('arrow-up')
+            +icon('up')
 
         script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
         script(src=`${baseDir}js/main.js`)

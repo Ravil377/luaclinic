@@ -1,3 +1,37 @@
-footer.footer.bg-dark.py-3
+footer.footer
     .container
-        p © Copyright 2021 ...
+        .row.justify-content-center 
+            .col-xl-3.col-12.footer__logo-container 
+                .logo
+                    include ../logo/logo
+                .social 
+                    p.d-md-block.d-none Мы в социальных сетях
+                    .contacts__social.d-flex
+                        a(href="#")
+                            +icon('vk')
+                        a(href="#")
+                            +icon('telegram')
+                        a(href="#")
+                            +icon('inst')
+            .col-xl-3.col-md-4.col-sm-6.col-12.contacts 
+                a(href="tel:88002103010") 8 800 210-30-10
+                p Санкт Петербург, Коломяжский&nbsp;пр.,&nbsp;д.&nbsp;5/3
+                a(href="https://yandex.ru/maps/?ll=59.99,30.30&z=12").mt-10.d-sm-none.d-flex.footer__nav-link.align-items-center
+                    +icon('nav')
+                    p построить маршрут
+            .col-xl-3.col-md-4.col-sm-6.col-12.work
+                | Режим работы
+                p Пн-Пт 9-21 / Сб-Вс 11-20
+            .col-xl-3.col-md-4.col-12.mt-20 
+                a(href="#enroll").d-flex.align-items-center.justify-content-between Записаться
+                    +icon('arrow-right-long') 
+        .footer__bottom 
+            p ИМЕЮТСЯ ПРОТИВОПОКАЗАНИЯ. НЕОБХОДИМО ПРОКОНСУЛЬТИРОВАТЬСЯ СО СПЕЦИАЛИСТОМ.
+            .footer__bottom-text 
+                .row 
+                    .col-lg.col-12.footer__copyright 
+                        | ©2013–2022. Все права защищены.<br>
+                        | Данный сайт носит информационно-справочный характер и ни при каких условиях не является публичной офертой. Для использования материалов сайта необходимо письменное разрешение компании.
+                    .col-lg-3.col-12.footer__politics 
+                        a(href="#") Политика конфиденциальности
+                        a(href="#") Договор оферты
