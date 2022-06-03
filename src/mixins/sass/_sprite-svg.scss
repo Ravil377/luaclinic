@@ -7,6 +7,9 @@
     fill: currentColor;
 }
 
+.icon-arrow-left {
+    width: math.div(22, 8) * 1em;
+}
 .icon-arrow-right {
     width: math.div(19, 8) * 1em;
 }
@@ -42,6 +45,9 @@
 }
 .icon-phone {
     width: math.div(20, 20) * 1em;
+}
+.icon-question-circle {
+    width: math.div(21, 21) * 1em;
 }
 .icon-search {
     width: math.div(16, 15) * 1em;

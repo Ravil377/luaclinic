@@ -315,3 +315,36 @@
         }
     }
 }
+.how__more-btn_underline {
+    max-width: 155px;
+    width: 100%;
+    @include transit();
+
+    p {
+        @include transit();
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 110%;
+        color: #000000;
+        display: table;
+        border-bottom: 1px solid $button-bg;
+    }
+    svg {
+        @include transit();
+        transform: rotate(90deg);
+        fill: black;
+        width: 16px;
+    }
+    &:hover {
+        p {
+            color: $button-bg;
+        }
+        svg {
+            fill: $button-bg;
+            animation-name: hvr-icon-wobble-vertical;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 1;
+        }
+    }
+}

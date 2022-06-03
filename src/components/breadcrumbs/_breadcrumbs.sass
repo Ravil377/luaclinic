@@ -3,34 +3,41 @@
     position: relative
     z-index: 1
     &__container
-        a
+        & > a
+            color: #999999
             font-weight: 400
             font-size: 12px
             line-height: 110%
             letter-spacing: 0.01em
-            color: #999999
+            @include transit()
+            &:hover
+                color: $button-bg
+                svg
+                    fill: $button-bg
+            svg
+                @include transit()
+                margin-right: 29px
+                fill: #999
     &__list
         align-items: center
         display: flex
         flex-wrap: wrap
         margin: 0
-        font-size: 14px
-        line-height: 1.2
+        font-weight: 400
+        font-size: 12px
+        line-height: 110%
+        letter-spacing: 0.01em
+        color: #999999
 
         li
             a
-                font-weight: 400
-                font-size: 12px
-                line-height: 110%
-                letter-spacing: 0.01em
                 color: #999999
                 text-decoration: none
-
+                @include transit()
+                &:hover
+                    color: $button-bg
+                
             &.is-active
-                font-weight: 400
-                font-size: 12px
-                line-height: 110%
-                letter-spacing: 0.01em
                 color: #999999
 
     &__divider

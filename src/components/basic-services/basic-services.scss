@@ -40,3 +40,84 @@
     }
     
 }
+.basic-services__bottom  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background: #FAF8F7;
+    border: 1px solid #DCB598;
+    padding: 18px;
+    @media (min-width: 768px) {
+        padding: 40px;
+        flex-direction: row;
+    }
+}
+.basic-services__question {
+    position: relative;
+    padding-left: 30px;
+    max-width: 320px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: 0.01em;
+    color: #000000;
+    @media (min-width: 768px) {
+        font-size: 24px;
+        padding-left: 40px;
+    }
+    .icon {
+        top: 3px;
+        position: absolute;
+        left: 0;
+    }
+}
+.basic-services__desc {
+    max-width: 320px;
+    padding-left: 30px;
+    width: 100%;
+    margin-top: 9px;
+    display: flex;
+    align-items: center;
+    p {
+        margin: 0;
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 120%;
+        letter-spacing: 0.01em;
+        color: #999999;
+    }
+    @media (min-width: 768px) {
+        p {
+            font-size: 15px;
+            line-height: 150%;
+            max-width: 481px;
+        }
+        padding-left: 40px;
+        margin-left: 20px;
+        justify-content: space-between;
+        max-width: 660px;
+        margin-top: 0;
+    }
+    &>a {
+        margin-left: 20px;
+        padding: 0;
+        background: unset;
+        @include transit();
+        &:hover {
+            .circle-btn {
+                background: $button-bg;
+                svg {
+                    fill: #fff;
+                }        
+            }    
+        }
+        .circle-btn {
+            border: 1px solid $button-bg;
+        }
+        svg {
+            fill: $button-bg;
+        }
+    }
+}
