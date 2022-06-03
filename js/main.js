@@ -53,6 +53,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _feedback_feedback__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./feedback/feedback */ "./src/components/feedback/feedback.js");
 /* harmony import */ var _interior_interior__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./interior/interior */ "./src/components/interior/interior.js");
 /* harmony import */ var _doctors_doctors__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./doctors/doctors */ "./src/components/doctors/doctors.js");
+/* harmony import */ var _contacts_contacts__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./contacts/contacts */ "./src/components/contacts/contacts.js");
+/* harmony import */ var _contacts_contacts__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_contacts_contacts__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _menu_menu__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./menu/menu */ "./src/components/menu/menu.js");
+/* harmony import */ var _menu_menu__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_menu_menu__WEBPACK_IMPORTED_MODULE_7__);
 // Form
  // Hamburger
 
@@ -61,6 +65,35 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+/***/ }),
+
+/***/ "./src/components/contacts/contacts.js":
+/*!*********************************************!*\
+  !*** ./src/components/contacts/contacts.js ***!
+  \*********************************************/
+/***/ (() => {
+
+if (document.querySelector('[id="map"]')) ymaps.ready(init);
+
+function init() {
+  var map = new ymaps.Map('map', {
+    center: [59.99765552868223, 30.306033608459433],
+    zoom: 16.5
+  });
+  var placemark = new ymaps.Placemark([59.99763940716278, 30.306055066131567], {
+    hintContent: '',
+    balloonContent: ''
+  }, {
+    iconLayout: 'default#image',
+    iconImageHref: './images/placemark.png',
+    iconImageSize: [78, 78],
+    iconImageOffset: [-25, -40]
+  });
+  map.geoObjects.add(placemark);
+}
 
 /***/ }),
 
@@ -280,6 +313,35 @@ if (document.querySelector(swiperInterior)) {
     }
   });
 }
+
+/***/ }),
+
+/***/ "./src/components/menu/menu.js":
+/*!*************************************!*\
+  !*** ./src/components/menu/menu.js ***!
+  \*************************************/
+/***/ (() => {
+
+var menu = document.querySelector('.menu');
+menu && menu.addEventListener('click', function (e) {
+  var isLi = e.target.classList.contains('menu__item-title');
+
+  if (isLi) {
+    var ulList = e.target.querySelector('ul');
+
+    if (!ulList.classList.contains('d-none')) {
+      ulList.classList.add('d-none');
+    } else {
+      var ulSubMenu = menu.querySelectorAll('.menu__list-subtitle');
+      ulSubMenu.forEach(function (item) {
+        if (!item.classList.contains('d-none')) {
+          item.classList.add('d-none');
+        }
+      });
+      ulList.classList.remove('d-none');
+    }
+  }
+});
 
 /***/ }),
 
