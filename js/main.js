@@ -83,7 +83,6 @@ if (document.querySelector(swiperBefore)) {
   beforeSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](swiperBefore, {
     slidesPerView: 'auto',
     spaceBetween: 10,
-    loop: true,
     breakpoints: {
       576: {
         slidesPerView: 2,
@@ -98,25 +97,26 @@ if (document.querySelector(swiperBefore)) {
       touchMove: function touchMove(e, evt) {
         if (evt.target.classList.contains('beer-range')) {
           beforeSwiper.disable();
-        } else {
-          beforeSwiper.enable();
         }
+      },
+      init: function init() {
+        $.fn.BeerSlider = function (options) {
+          options = options || {};
+          return this.each(function () {
+            new BeerSlider(this, options);
+          });
+        };
 
-        ;
+        $('.beer-slider').BeerSlider({
+          start: 50
+        });
       }
     }
   });
 }
 
-$.fn.BeerSlider = function (options) {
-  options = options || {};
-  return this.each(function () {
-    new BeerSlider(this, options);
-  });
-};
-
-$('.beer-slider').BeerSlider({
-  start: 50
+document.querySelector('.before-services__list').addEventListener('mousedown', function (e) {
+  beforeSwiper.enable();
 });
 
 /***/ }),
@@ -3574,9 +3574,7 @@ __webpack_require__.r(__webpack_exports__);
 
             var eventTypes = ['input', 'change'];
             eventTypes.forEach(function (i) {
-              _this2.range.addEventListener(i, function (e) {
-                console.log(e.target);
-
+              _this2.range.addEventListener(i, function () {
                 _this2.move();
               });
             });
