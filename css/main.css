@@ -17660,11 +17660,17 @@ a[href="#header"] .icon {
   min-width: 568px;
   height: 100%;
 }
+.before-services__item .beer-slider .beer-range {
+  top: 50%;
+  transform: translateY(-50%);
+  height: 1px;
+}
 .before-services__item .beer-slider .beer-handle {
   background: #DCB598;
   border-radius: 50%;
   width: 44px;
   height: 44px;
+  z-index: 3;
 }
 .before-services__item .beer-slider > img {
   width: 100%;
