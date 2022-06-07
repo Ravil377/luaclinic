@@ -55,6 +55,7 @@ __webpack_require__.r(__webpack_exports__);
 
 swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation]);
 var swiperAction = '.actual-action__slider';
+var swiperRead = '.read__slider';
 
 if (document.querySelector(swiperAction)) {
   var actionSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](swiperAction, {
