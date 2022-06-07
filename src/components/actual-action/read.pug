@@ -1,0 +1,16 @@
+include ../card/card-slide-read
+include ../slider-navigation/slider-navigation
+
+.actual-action__slider 
+    ul.actual-action__wrapper.swiper-wrapper
+        li.swiper-slide.col-xl-4.col-md-6.col-12
+            +cardslideread('В физиологических условиях данный комплекс распадается', 'photo1.jpg', '#косметика')
+        li.swiper-slide.col-xl-4.col-md-6.col-12
+            +cardslideread('Первый этап действия ботулинического токсина', 'photo2.jpg', '#косметика')
+        li.swiper-slide.col-xl-4.col-md-6.col-12
+            +cardslideread('При внутримышечном введении развивается 2 эффекта', 'photo3.jpg', '#косметика')
+        li.swiper-slide.col-xl-4.col-md-6.col-12
+            +cardslideread('При внутриклеточной инъекции в области локализации', 'photo4.jpg', '#косметика')
+        li.swiper-slide.col-xl-4.col-md-6.col-12
+            +cardslideread('8	Использование в косметических целях', 'photo5.jpg', '#косметика')
+    +slider-navigation('basic')

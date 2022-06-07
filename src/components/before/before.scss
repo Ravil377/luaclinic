@@ -1,0 +1,100 @@
+.before-services {
+    margin-bottom: 136px;
+    overflow: hidden;
+}
+
+.before-services__list {
+    height: 244px;
+    display: flex;
+    @media (min-width: 768px) {
+        height: 450px;
+    }
+}
+.before-services__list-container {
+    position: relative;
+}
+.before-services__item {
+    position: relative;
+    min-width: 308px;
+    @media (min-width: 768px) {
+        min-width: 568px;
+    }
+    .beer-slider {
+        width: 100%;
+        height: 100%;
+        .beer-range {
+            top: 50%;
+            transform: translateY(-50%);
+            height: 1px;
+        }
+        .beer-handle {
+            background: #DCB598;
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            z-index: 3;
+        }
+    }
+    .beer-slider > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .beer-reveal {
+        border-right: 2px solid white;
+        background: rgba(black, .4);
+    }
+    .beer-reveal > img:first-child {
+        height: 100%;
+        object-fit: cover;
+    }
+    .beer-reveal[data-beer-label]:after,
+    .beer-slider[data-beer-label]:after {
+        content: '';
+        background: unset;
+    }
+    .beer-handle:after, .beer-handle:before {
+        border-left: 2px solid white;
+        border-top: 2px solid white;
+    }
+}
+
+.before-services__btn {
+    display: none;
+    @media (min-width: 1200px) {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: -52px;
+        transform: translateY(-50%);
+        width: 104px;
+        height: 104px;
+        background: #FFFFFF;
+        box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        @include transit();
+        justify-content: center;
+    }
+    &:hover {
+        background: #DCB598;
+        svg {
+            fill: white;
+        }
+    }
+    svg {
+        transform: rotate(-180deg);
+        width: 7px;
+        height: 14px;
+        fill: black;
+    }
+}
+.before-services__btn_right {
+    left: unset;
+    right: -52px;
+    svg {
+        transform: rotate(0);
+    }
+}

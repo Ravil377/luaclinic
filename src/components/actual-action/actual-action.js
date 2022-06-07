@@ -2,6 +2,7 @@ import Swiper, { Navigation, Pagination } from 'swiper';
 Swiper.use([Navigation]);
 
 const swiperAction = '.actual-action__slider';
+const swiperRead = '.read__slider';
 
 if (document.querySelector(swiperAction)) {
   const actionSwiper = new Swiper(swiperAction, {
@@ -11,7 +12,7 @@ if (document.querySelector(swiperAction)) {
       breakpoints: {
           576: {
               slidesPerView: 2,
-              spaceBetween: 20  
+              spaceBetween: 20
           },
           1200: {
             slidesPerView: 3,

@@ -10,4 +10,5 @@ import './interior/interior'
 import './doctors/doctors'
 import './contacts/contacts'
 import './menu/menu'
+import './before/before'
 

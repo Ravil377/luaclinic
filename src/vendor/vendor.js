@@ -1,4 +1,4 @@
-import './go-top/go-top'
+//import './go-top/go-top'
 
 // Magnific Popup
 // import './magnific-popup/init'
@@ -11,3 +11,5 @@ import './go-top/go-top'
 
 // Fixed block
 // import './fixedblock'
+// import './beerslider/beerslider'
+//import './twenty/jquery.twentytwenty'

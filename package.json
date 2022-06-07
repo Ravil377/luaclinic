@@ -76,6 +76,7 @@
     "yargs": "latest"
   },
   "dependencies": {
+    "beerslider": "^1.0.3",
     "bootstrap": "latest",
     "enquire.js": "latest",
     "gh-pages": "^4.0.0",

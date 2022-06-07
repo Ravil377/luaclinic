@@ -30,6 +30,7 @@ html(lang="ru")
                                     <path d="M1.10836 3.64645C0.913099 3.84171 0.913099 4.15829 1.10836 4.35355L4.29034 7.53553C4.4856 7.7308 4.80219 7.7308 4.99745 7.53553C5.19271 7.34027 5.19271 7.02369 4.99745 6.82843L2.16902 4L4.99745 1.17157C5.19271 0.976311 5.19271 0.659728 4.99745 0.464466C4.80219 0.269204 4.4856 0.269204 4.29034 0.464466L1.10836 3.64645ZM21.4619 3.5H1.46191V4.5H21.4619V3.5Z" />
                                 </svg>
                                 | Вернуться назад
+                block article
                 block welcome
                 block menuServices
             .wrapper__content
@@ -37,8 +38,10 @@ html(lang="ru")
                 block basic-services
                 block equipment1
                 block actual-action
+                block read
                 block consultation
                 block feedback
+                block beforeServies              
                 block how
                 block interior
                 block equipment
@@ -48,15 +51,15 @@ html(lang="ru")
                 block free-consultation
                 block contacts
                 block menu
-
+                
             //- Include footer
             include ../../components/footer/footer
 
         //- //- Include callback
         //- include ../../components/form/form--callback
 
-        a.go-top.go-top--js(href='#')
-            +icon('up')
+        //- a.go-top.go-top--js(href='#')
+        //-     +icon('up')
 
         script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
         script(src=`${baseDir}js/main.js`)
