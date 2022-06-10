@@ -1,0 +1,91 @@
+extends base/pug/base
+include ./components/slider-navigation/slider-navigation
+
+append variables
+    - var title = 'Фото и видео'
+    - var pageClass = 'gallery'
+    - var menuHref = '/'
+
+block gallery
+    section.gallery 
+        .container.gallery__container
+            h1.title Фото и видео
+            .gallery__category.slider-nav__container Лазерная дипиляция
+                .gallery__slider
+                    ul.gallery__category-list.swiper-wrapper
+                        li.gallery__category-item.swiper-slide
+                            img(src="./images/gallery/photo1.jpg" alt='photo')
+                        li.gallery__category-item.swiper-slide
+                            img(src="./images/gallery/photo2.jpg" alt='photo')
+                        li.gallery__category-item.swiper-slide
+                            img(src="./images/gallery/photo3.jpg" alt='photo')
+                        li.gallery__category-item.swiper-slide
+                            img(src="./images/gallery/photo4.jpg" alt='photo')
+                        li.gallery__category-item.swiper-slide
+                            img(src="./images/gallery/photo5.jpg" alt='photo')
+                        li.gallery__category-item.swiper-slide
+                            img(src="./images/gallery/photo6.jpg" alt='photo')
+                        li.gallery__category-item.swiper-slide
+                            img(src="./images/gallery/photo7.jpg" alt='photo')
+                        li.gallery__category-item.swiper-slide
+                            img(src="./images/gallery/photo2.jpg" alt='photo')
+                        li.gallery__category-item.swiper-slide
+                            img(src="./images/gallery/photo3.jpg" alt='photo')
+                        li.gallery__category-item.swiper-slide
+                            img(src="./images/gallery/photo4.jpg" alt='photo')
+                        li.gallery__category-item.swiper-slide
+                            img(src="./images/gallery/photo5.jpg" alt='photo')
+                        li.gallery__category-item.swiper-slide
+                            img(src="./images/gallery/photo6.jpg" alt='photo')
+                        li.gallery__category-item.swiper-slide
+                            img(src="./images/gallery/photo7.jpg" alt='photo')
+                    +slider-navigation('gallery')
+            .gallery__category.slider-nav__container.mt-50 Эстестическая косметология
+                .gallery__slider
+                    ul.gallery__category-list.swiper-wrapper
+                        li.gallery__category-item.swiper-slide
+                            img(src="./images/gallery/photo8.jpg" alt='photo')
+                        li.gallery__category-item.swiper-slide
+                            img(src="./images/gallery/photo9.jpg" alt='photo')
+                        li.gallery__category-item.swiper-slide
+                            img(src="./images/gallery/photo10.jpg" alt='photo')
+                        li.gallery__category-item.swiper-slide
+                            img(src="./images/gallery/photo11.jpg" alt='photo')
+                        li.gallery__category-item.swiper-slide
+                            img(src="./images/gallery/photo12.jpg" alt='photo')
+                        li.gallery__category-item.swiper-slide
+                            img(src="./images/gallery/photo13.jpg" alt='photo')
+                        li.gallery__category-item.swiper-slide
+                            img(src="./images/gallery/photo1.jpg" alt='photo')
+                    +slider-navigation('gallery1')
+
+
+
+
+block consultation
+    section.consultation#enroll
+        .container
+            h2.title Запишитесь на&nbsp;консультацию!
+            p.subtitle Если возникли вопросы, мы с радостью, и в самые короткие сроки на них ответим!
+            form(action='#').form
+                .row
+                    .form__input-container.col-xl-4.col-md-6.col-12
+                        .form__placeholder-container
+                            input(type="text" placeholder=" " required)
+                            label Ваше имя
+                        |  Пожалуйста, представьтесь, как к Вам обращаться
+                    .form__input-container.col-xl-4.col-md-6.col-12.mt-md-0.mt-20
+                        .form__placeholder-container
+                            input(type="tel" placeholder=" " required)#phone
+                            label Номер телефона
+                            +icon('flag')
+                        | Никакой рекламы и спама
+                    .form__button-container.col-xl-4.col-12.mt-xl-0.mt-20
+                        button(type="submit") Получить консультацию
+                            +icon('arrow-right-long')
+                        | Отправляя запрос Вы соглашаетесь на обработку персональных данных. Данные не передаются третьим лицам
+
+block banner 
+    include ./components/banner/banner
+block menu 
+    include ./components/menu/menu

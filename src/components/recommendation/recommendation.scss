@@ -1,0 +1,56 @@
+.recommendation {
+    overflow: hidden;
+    ul {
+        li {
+            display: flex;
+            flex-direction: column;
+            img {
+                width: inherit;
+                object-fit: cover;
+                height: 230px;
+                margin-bottom: 23px;
+            }
+            p {
+                font-weight: 400;
+                font-size: 22px;
+                line-height: 130%;
+                letter-spacing: 0.01em;
+                color: #000000;
+                margin-bottom: 47px;
+                span {
+                    margin-top: 10px;
+                    display: block;
+                    font-weight: 300;
+                    font-size: 16px;
+                    line-height: 130%;
+                    letter-spacing: 0.01em;
+                    color: #000000;
+                }
+            }
+            a {
+                margin-top: auto;
+                font-weight: 550;
+                font-size: 22px;
+                line-height: 130%;
+                letter-spacing: 0.01em;
+                color: #000000;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                &:hover {
+                    color: #D1A788;
+                    .circle-btn {
+                        background: #D1A788;
+                        svg {
+                            fill: white;
+                        }
+                        animation-name: hvr-icon-wobble-horizontal1;
+                        animation-duration: 1s;
+                        animation-timing-function: ease-in-out;
+                        animation-iteration-count: 1;
+                    }
+                }
+            }
+        }
+    }
+}

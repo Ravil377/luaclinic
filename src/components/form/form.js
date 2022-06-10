@@ -1,5 +1,6 @@
 import inputmask from 'inputmask'
 const $phoneMask = document.querySelector('#phone')
+const $phoneMaskmini = document.querySelector('#phone-mini')
 
 if ($phoneMask) {
 	inputmask({
@@ -7,7 +8,12 @@ if ($phoneMask) {
 		// showMaskOnHover: false
 	}).mask($phoneMask)
 }
-
+if ($phoneMaskmini) {
+	inputmask({
+		mask: '+7(999) 9999999'
+		// showMaskOnHover: false
+	}).mask($phoneMaskmini)
+}
 // jQuery(document).ready(($) => {
 // 	// Callback form
 // 	$('#callbackForm').simpleSendForm({

@@ -1,0 +1,116 @@
+.price {
+    margin-bottom: 80px;
+}
+.price__item {
+    padding: 27px 0;
+    flex-direction: column;
+    border-bottom: 1px solid #E2E2E2;
+    @media (min-width: 992px) {
+        flex-direction: row;
+    }
+    button {
+        border: 1px solid #DCB598;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        @include transit;
+        justify-content: center;
+        background: #DCB598;
+        margin-left: 36px;
+        position: relative;
+        @media (max-width: 768px) {
+            padding: 0;
+        }
+        &:hover {
+            p {
+                color: white;
+            }
+            svg {
+                fill: white;
+                animation-name: hvr-icon-wobble-horizontal;
+                animation-duration: 1s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: 1;
+            }
+            background: #D1A788;
+        }
+        p {
+
+            display: none;
+        }
+        svg {
+            position: absolute;
+            // right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            fill: #fff;
+        }
+        @media (min-width: 768px) {
+            max-width: 221px;
+            height: unset;
+            width: 100%;
+            background: #fff;
+            padding: 11.5px;
+            p {
+                display: block;
+                color: #000;
+                margin: 0;
+                padding-right: 36px;
+            }
+            svg {
+                right: 15px;
+                transform: translateY(-50%);
+                fill: #000;
+            }
+        }
+    }
+}
+.price__title {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: 0.01em;
+    color: #000000;
+    margin-bottom: 10px;
+    @media (min-width: 768px) {
+        font-size: 22px;
+    }
+    @media (min-width: 992px) {
+        margin-bottom: 0;
+        
+    }
+}
+
+.price__time {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: 0.01em;
+    color: #999999;
+    white-space: nowrap;
+    @media (min-width: 768px) {
+        font-size: 22px;
+    }
+    
+    @media (min-width: 992px) {
+        margin-left: auto;        
+    }
+    .icon {
+        width: 18px;
+        height: 18px;
+        margin-right: 13px;
+        margin-bottom: 2px;
+    }
+}
+.price__cost {
+    font-weight: 550;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: 0.01em;
+    color: #D1A788;
+    margin-left: 34px;
+    white-space: nowrap;
+    @media (min-width: 768px) {
+        font-size: 22px;
+    }
+}

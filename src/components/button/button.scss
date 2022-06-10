@@ -1,6 +1,7 @@
 a[href="#enroll"],
 a[href="#consultation"],
-button[type='submit'] {
+button[type='submit'],
+button[id='modal'] {
     display: block;
     font-weight: 550;
     font-size: 17px;

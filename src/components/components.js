@@ -11,4 +11,8 @@ import './doctors/doctors'
 import './contacts/contacts'
 import './menu/menu'
 import './before/before'
+import './gallery/gallery'
+import './detail/detail'
+import './question/question'
+import './recommendation/recommendation'
 
