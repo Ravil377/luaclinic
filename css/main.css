@@ -15575,7 +15575,8 @@ body.is-animate .overlay {
 
 a[href="#enroll"],
 a[href="#consultation"],
-button[type=submit] {
+button[type=submit],
+button[id=modal] {
   display: block;
   font-weight: 550;
   font-size: 1.0625rem;
@@ -15589,13 +15590,15 @@ button[type=submit] {
 }
 a[href="#enroll"] .icon-arrow-right-shot,
 a[href="#consultation"] .icon-arrow-right-shot,
-button[type=submit] .icon-arrow-right-shot {
+button[type=submit] .icon-arrow-right-shot,
+button[id=modal] .icon-arrow-right-shot {
   width: 20px;
   margin-left: 26.5px;
 }
 a[href="#enroll"]:hover .icon-arrow-right-shot,
 a[href="#consultation"]:hover .icon-arrow-right-shot,
-button[type=submit]:hover .icon-arrow-right-shot {
+button[type=submit]:hover .icon-arrow-right-shot,
+button[id=modal]:hover .icon-arrow-right-shot {
   animation-name: hvr-icon-wobble-horizontal1;
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
@@ -15603,7 +15606,8 @@ button[type=submit]:hover .icon-arrow-right-shot {
 }
 a[href="#enroll"]:hover .icon-arrow-right-long,
 a[href="#consultation"]:hover .icon-arrow-right-long,
-button[type=submit]:hover .icon-arrow-right-long {
+button[type=submit]:hover .icon-arrow-right-long,
+button[id=modal]:hover .icon-arrow-right-long {
   animation-name: hvr-icon-wobble-horizontal;
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
@@ -16417,6 +16421,7 @@ a[href="#consultation"] .icon-arrow-right-long {
   height: 100%;
   background: #F7F7F7;
   display: flex;
+  width: inherit;
   flex-direction: column;
 }
 @media (min-width: 992px) {
@@ -16666,7 +16671,8 @@ a[href="#consultation"] .icon-arrow-right-long {
   }
 }
 
-.feedback__slider ul {
+.feedback__slider ul,
+.feedback__slider1 ul {
   display: flex;
   min-height: 344px;
 }
@@ -18455,7 +18461,7 @@ a[href="#header"] .icon {
   position: absolute;
   transition: all 0.24s;
   right: 0;
-  top: 50%;
+  top: 15px;
   width: 28px;
   height: 28px;
   border: 1px solid #DCB598;
@@ -18743,6 +18749,356 @@ a[href="#header"] .icon {
     font-size: 1.0625rem;
     margin-top: 33px;
   }
+}
+
+.feedback-question__feedback-container {
+  overflow: hidden;
+  margin-bottom: 35px;
+}
+
+@media (min-width: 992px) {
+  .feedback-question .feedback__slider1 ul li .card-feedback {
+    padding: 33px 30px;
+  }
+}
+
+.price {
+  margin-bottom: 80px;
+}
+
+.price__item {
+  padding: 27px 0;
+  flex-direction: column;
+  border-bottom: 1px solid #E2E2E2;
+}
+@media (min-width: 992px) {
+  .price__item {
+    flex-direction: row;
+  }
+}
+.price__item button {
+  border: 1px solid #DCB598;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  transition: all 0.24s;
+  justify-content: center;
+  background: #DCB598;
+  margin-left: 36px;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .price__item button {
+    padding: 0;
+  }
+}
+.price__item button:hover {
+  background: #D1A788;
+}
+.price__item button:hover p {
+  color: white;
+}
+.price__item button:hover svg {
+  fill: white;
+  animation-name: hvr-icon-wobble-horizontal;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+.price__item button p {
+  display: none;
+}
+.price__item button svg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: #fff;
+}
+@media (min-width: 768px) {
+  .price__item button {
+    max-width: 221px;
+    height: unset;
+    width: 100%;
+    background: #fff;
+    padding: 11.5px;
+  }
+  .price__item button p {
+    display: block;
+    color: #000;
+    margin: 0;
+    padding-right: 36px;
+  }
+  .price__item button svg {
+    right: 15px;
+    transform: translateY(-50%);
+    fill: #000;
+  }
+}
+
+.price__title {
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  color: #000000;
+  margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+  .price__title {
+    font-size: 1.375rem;
+  }
+}
+@media (min-width: 992px) {
+  .price__title {
+    margin-bottom: 0;
+  }
+}
+
+.price__time {
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  color: #999999;
+  white-space: nowrap;
+}
+@media (min-width: 768px) {
+  .price__time {
+    font-size: 1.375rem;
+  }
+}
+@media (min-width: 992px) {
+  .price__time {
+    margin-left: auto;
+  }
+}
+.price__time .icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 13px;
+  margin-bottom: 2px;
+}
+
+.price__cost {
+  font-weight: 550;
+  font-size: 1.125rem;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  color: #D1A788;
+  margin-left: 34px;
+  white-space: nowrap;
+}
+@media (min-width: 768px) {
+  .price__cost {
+    font-size: 1.375rem;
+  }
+}
+
+.question__list {
+  margin: 0;
+}
+.question__list li {
+  padding: 16.5px 0;
+  border-bottom: 1px solid #E2E2E2;
+  cursor: pointer;
+  max-width: 629px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .question__list li {
+    padding: 35px 0;
+  }
+}
+.question__list li.active p {
+  color: #D1A788;
+  font-weight: 550;
+}
+.question__list li.active p::before {
+  content: "-";
+  background: #DCB598;
+  color: white;
+}
+.question__list li.active .question__answer-container {
+  display: block;
+}
+.question__list li .question__answer-container {
+  font-weight: 300;
+  margin-top: 17px;
+  font-size: 0.9375rem;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  color: #000000;
+  display: none;
+}
+@media (min-width: 768px) {
+  .question__list li .question__answer-container {
+    font-size: 1.0625rem;
+  }
+}
+.question__list li p {
+  transition: all 0.24s;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  color: #000000;
+  width: 100%;
+  margin: 0;
+  padding-right: 100px;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .question__list li p {
+    font-size: 1.375rem;
+  }
+}
+.question__list li p::before {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transition: all 0.24s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  border: 1px solid #DCB598;
+  border-radius: 50%;
+}
+@media (min-width: 768px) {
+  .question__list li p::before {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+.feedback-question .question__list {
+  margin-bottom: 35px;
+}
+.feedback-question .question__list li {
+  padding: 20px 0;
+  max-width: 100%;
+}
+.feedback-question .question__list li p {
+  font-size: 1.125rem;
+}
+.feedback-question .question__list li p span {
+  display: block;
+  font-weight: 300;
+  font-size: 0.8125rem;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  color: #999999;
+}
+
+.feedback-question__buttons {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: auto;
+}
+@media (min-width: 768px) {
+  .feedback-question__buttons {
+    flex-direction: row;
+  }
+}
+
+.feedback-question__button {
+  padding: 11.5px;
+  width: 100%;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9375rem;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  color: #999999;
+  border: 1px solid #E2E2E2;
+  transition: all 0.24s;
+  position: relative;
+  margin-bottom: 16px;
+}
+@media (min-width: 768px) {
+  .feedback-question__button {
+    max-width: 242px;
+    font-size: 1rem;
+    margin: 0 12px;
+  }
+}
+.feedback-question__button svg {
+  right: 0;
+  display: none;
+  margin-left: 10px;
+}
+.feedback-question__button:hover {
+  color: #000000;
+  border: 1px solid #DCB598;
+}
+.feedback-question__button:hover svg {
+  fill: #000000;
+  display: block;
+  animation-name: hvr-icon-wobble-horizontal1;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+.recommendation {
+  overflow: hidden;
+}
+.recommendation ul li {
+  display: flex;
+  flex-direction: column;
+}
+.recommendation ul li img {
+  width: inherit;
+  object-fit: cover;
+  height: 230px;
+  margin-bottom: 23px;
+}
+.recommendation ul li p {
+  font-weight: 400;
+  font-size: 1.375rem;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  color: #000000;
+  margin-bottom: 47px;
+}
+.recommendation ul li p span {
+  margin-top: 10px;
+  display: block;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+.recommendation ul li a {
+  margin-top: auto;
+  font-weight: 550;
+  font-size: 1.375rem;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  color: #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.recommendation ul li a:hover {
+  color: #D1A788;
+}
+.recommendation ul li a:hover .circle-btn {
+  background: #D1A788;
+  animation-name: hvr-icon-wobble-horizontal1;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+.recommendation ul li a:hover .circle-btn svg {
+  fill: white;
 }
 
 /**

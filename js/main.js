@@ -316,9 +316,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _before_before__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./before/before */ "./src/components/before/before.js");
 /* harmony import */ var _gallery_gallery__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./gallery/gallery */ "./src/components/gallery/gallery.js");
 /* harmony import */ var _detail_detail__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./detail/detail */ "./src/components/detail/detail.js");
-/* harmony import */ var _detail_detail__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_detail_detail__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _question_question__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./question/question */ "./src/components/question/question.js");
+/* harmony import */ var _question_question__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_question_question__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _recommendation_recommendation__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./recommendation/recommendation */ "./src/components/recommendation/recommendation.js");
 // Form
  // Hamburger
+
+
 
 
 
@@ -364,12 +368,66 @@ function init() {
 /*!*****************************************!*\
   !*** ./src/components/detail/detail.js ***!
   \*****************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
+
+swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation]);
+var swiperAction = '.actual-action__slider';
+var swiperRecommendation = '.recommendation__slider';
 var detailList = document.querySelector('.detail__tabs-list');
-detailList.addEventListener('click', function (e) {
+detailList && detailList.addEventListener('click', function (e) {
   e.target.closest('.detail__tabs-item').classList.toggle('active');
 });
+
+if (document.querySelector(swiperAction)) {
+  var actionSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](swiperAction, {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    loop: true,
+    breakpoints: {
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 30
+      }
+    },
+    navigation: {
+      nextEl: '.slider-nav-basic__next-btn-js',
+      prevEl: '.slider-nav-basic__prev-btn-js'
+    }
+  });
+}
+
+if (document.querySelector(swiperRecommendation)) {
+  var RecommendationSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](swiperRecommendation, {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    breakpoints: {
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 30
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 30
+      },
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 30
+      }
+    },
+    navigation: {
+      nextEl: '.slider-nav-recommendation__next-btn-js',
+      prevEl: '.slider-nav-recommendation__prev-btn-js'
+    }
+  });
+}
 
 /***/ }),
 
@@ -651,6 +709,62 @@ menu && menu.addEventListener('click', function (e) {
     }
   }
 });
+
+/***/ }),
+
+/***/ "./src/components/question/question.js":
+/*!*********************************************!*\
+  !*** ./src/components/question/question.js ***!
+  \*********************************************/
+/***/ (() => {
+
+var questionLists = document.querySelectorAll('.question__list-js');
+questionLists.forEach(function (item) {
+  item.addEventListener('click', function (e) {
+    e.target.closest('.question__item').classList.toggle('active');
+  });
+});
+
+/***/ }),
+
+/***/ "./src/components/recommendation/recommendation.js":
+/*!*********************************************************!*\
+  !*** ./src/components/recommendation/recommendation.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
+
+swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation]);
+var swiperfeedback1 = '.feedback__slider1';
+
+if (document.querySelector(swiperfeedback1)) {
+  var feedback1Swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](swiperfeedback1, {
+    slidesPerView: 1,
+    spaceBetween: 3,
+    freeMode: true,
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 3
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 3
+      },
+      1200: {
+        slidesPerView: 2,
+        spaceBetween: 3
+      }
+    },
+    navigation: {
+      nextEl: '.slider-nav-feedback__next-btn-js',
+      prevEl: '.slider-nav-feedback__prev-btn-js'
+    }
+  });
+}
 
 /***/ }),
 
