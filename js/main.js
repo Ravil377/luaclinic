@@ -611,7 +611,22 @@ $mobilListMenuServices.addEventListener('click', function (e) {
 });
 $menuServicesCloseBtn.addEventListener('click', toggleServices);
 $hamburger.addEventListener('click', toggleServices);
-$hamburgerBtn.addEventListener('click', openMobilMenu); // const $mainmenu = document.querySelector('.mainmenu--js')
+$hamburgerBtn.addEventListener('click', openMobilMenu);
+
+window.onscroll = function () {
+  myFunction();
+};
+
+var headerSticky = document.querySelector(".header__sticky");
+var sticky = 900; // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    headerSticky.classList.add("sticky");
+  } else {
+    headerSticky.classList.remove("sticky");
+  }
+} // const $mainmenu = document.querySelector('.mainmenu--js')
 // const $closeBtn = document.querySelector('.mainmenu--close')
 // function showMenu() {
 // 	$mainmenu.classList.add('is-active')

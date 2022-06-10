@@ -14479,6 +14479,7 @@ a {
 }
 
 body {
+  position: relative;
   overflow-x: hidden;
 }
 body.fixed {
@@ -14500,31 +14501,31 @@ body.fixed .wrapper__content {
 body.fixed .wrapper__content.wrapper__content_bg:after {
   background: unset;
 }
-body.serviсes .logo-svg, body.page .logo-svg, body.gallery .logo-svg, body.detail .logo-svg {
+body.serviсes .logo-svg, body.page .logo-svg, body.gallery .logo-svg, body.detail .logo-svg, body .header__sticky .logo-svg {
   fill: #000;
 }
-body.serviсes .header__mobil a svg, body.page .header__mobil a svg, body.gallery .header__mobil a svg, body.detail .header__mobil a svg {
+body.serviсes .header__mobil a svg, body.page .header__mobil a svg, body.gallery .header__mobil a svg, body.detail .header__mobil a svg, body .header__sticky .header__mobil a svg {
   fill: #000;
 }
-body.serviсes .hamburger::after, body.serviсes .hamburger::before, body.page .hamburger::after, body.page .hamburger::before, body.gallery .hamburger::after, body.gallery .hamburger::before, body.detail .hamburger::after, body.detail .hamburger::before {
+body.serviсes .hamburger::after, body.serviсes .hamburger::before, body.page .hamburger::after, body.page .hamburger::before, body.gallery .hamburger::after, body.gallery .hamburger::before, body.detail .hamburger::after, body.detail .hamburger::before, body .header__sticky .hamburger::after, body .header__sticky .hamburger::before {
   background: #000;
 }
-body.serviсes .header__top nav ul li a, body.page .header__top nav ul li a, body.gallery .header__top nav ul li a, body.detail .header__top nav ul li a {
+body.serviсes .header__top nav ul li a, body.serviсes .header__top-right nav ul li a, body.page .header__top nav ul li a, body.page .header__top-right nav ul li a, body.gallery .header__top nav ul li a, body.gallery .header__top-right nav ul li a, body.detail .header__top nav ul li a, body.detail .header__top-right nav ul li a, body .header__sticky .header__top nav ul li a, body .header__sticky .header__top-right nav ul li a {
   color: #626262;
 }
-body.serviсes .header__top .search-btn svg, body.page .header__top .search-btn svg, body.gallery .header__top .search-btn svg, body.detail .header__top .search-btn svg {
+body.serviсes .header__top .search-btn svg, body.serviсes .header__top-right .search-btn svg, body.page .header__top .search-btn svg, body.page .header__top-right .search-btn svg, body.gallery .header__top .search-btn svg, body.gallery .header__top-right .search-btn svg, body.detail .header__top .search-btn svg, body.detail .header__top-right .search-btn svg, body .header__sticky .header__top .search-btn svg, body .header__sticky .header__top-right .search-btn svg {
   fill: #000;
 }
-body.serviсes .header__top-right a, body.page .header__top-right a, body.gallery .header__top-right a, body.detail .header__top-right a {
+body.serviсes .header__top-right a, body.page .header__top-right a, body.gallery .header__top-right a, body.detail .header__top-right a, body .header__sticky .header__top-right a {
   color: #000;
 }
-body.serviсes a[href="#enroll"], body.page a[href="#enroll"], body.gallery a[href="#enroll"], body.detail a[href="#enroll"] {
+body.serviсes a[href="#enroll"], body.page a[href="#enroll"], body.gallery a[href="#enroll"], body.detail a[href="#enroll"], body .header__sticky a[href="#enroll"] {
   color: #fff;
 }
-body.serviсes .header__info p, body.page .header__info p, body.gallery .header__info p, body.detail .header__info p {
+body.serviсes .header__info p, body.page .header__info p, body.gallery .header__info p, body.detail .header__info p, body .header__sticky .header__info p {
   color: #000000;
 }
-body.serviсes .header__bottom-menu ul li > a, body.page .header__bottom-menu ul li > a, body.gallery .header__bottom-menu ul li > a, body.detail .header__bottom-menu ul li > a {
+body.serviсes .header__bottom-menu ul li > a, body.page .header__bottom-menu ul li > a, body.gallery .header__bottom-menu ul li > a, body.detail .header__bottom-menu ul li > a, body .header__sticky .header__bottom-menu ul li > a {
   color: #000000;
 }
 
@@ -15110,6 +15111,44 @@ ol {
 }
 .header__mobil-menu-list-2 ul li a {
   color: inherit;
+}
+
+.header__sticky {
+  background: white;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  transform: translateY(-100%);
+  transition: all 0.24s;
+}
+.header__sticky.sticky {
+  transform: translateY(0);
+}
+
+.header__sticky-link {
+  font-weight: 550;
+  font-size: 1.0625rem;
+  line-height: 110%;
+  color: #FFFFFF;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background: #D1A788;
+}
+.header__sticky-link svg {
+  margin-left: 20px;
+}
+.header__sticky-link:hover {
+  color: white;
+}
+.header__sticky-link:hover svg {
+  animation-name: hvr-icon-wobble-horizontal1;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
 }
 
 .logo {
