@@ -618,7 +618,7 @@ window.onscroll = function () {
 };
 
 var headerSticky = document.querySelector(".header__sticky");
-var sticky = 900; // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+var sticky = 900;
 
 function myFunction() {
   if (window.pageYOffset > sticky) {
