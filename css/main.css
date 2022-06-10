@@ -14481,6 +14481,9 @@ a {
 body {
   overflow-x: hidden;
 }
+body.fixed {
+  overflow: hidden;
+}
 body.fixed .logo-svg {
   fill: #000;
 }
@@ -14801,6 +14804,10 @@ ol {
   color: #626262;
 }
 
+.header__container {
+  position: relative;
+}
+
 .header__top nav ul {
   font-size: 0.9375rem;
   letter-spacing: 0.01em;
@@ -14899,8 +14906,16 @@ ol {
   animation-duration: 1s;
   animation-fill-mode: both;
   padding-top: 6px;
-  padding-bottom: 35px;
+  padding-bottom: 100px;
   width: 100%;
+  padding-left: inherit;
+  padding-right: inherit;
+  position: fixed;
+  overflow-y: scroll;
+  left: 0;
+  height: 100%;
+  width: 100vw;
+  right: 0;
   background: #ffffff;
   display: none;
 }
@@ -15864,10 +15879,13 @@ a[href="#consultation"] .icon-arrow-right-long {
   padding-top: 42px;
   background: white;
   z-index: 5;
+  right: 0;
   display: none;
+  overflow-y: scroll;
   line-height: 200%;
   font-weight: 300;
-  position: absolute;
+  width: inherit;
+  position: fixed;
   transition: all 0.24s;
   opacity: 0;
 }
