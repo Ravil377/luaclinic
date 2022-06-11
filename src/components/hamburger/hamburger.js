@@ -36,6 +36,32 @@ $mobilListMenuServices.addEventListener('click', (e) => {
 $menuServicesCloseBtn.addEventListener('click', toggleServices);
 $hamburger.addEventListener('click', toggleServices);
 $hamburgerBtn.addEventListener('click', openMobilMenu);
+
+
+
+window.onscroll = function() {myFunction()};
+const headerSticky = document.querySelector(".header__sticky");
+const sticky = 900;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    headerSticky.classList.add("sticky");
+  } else {
+    headerSticky.classList.remove("sticky");
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 // const $mainmenu = document.querySelector('.mainmenu--js')
 // const $closeBtn = document.querySelector('.mainmenu--close')
 

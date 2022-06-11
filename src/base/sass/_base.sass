@@ -7,11 +7,11 @@ a
 	text-decoration: none
 	@include transit()
 body
-	//position: relative
+	position: relative
 	overflow-x: hidden
 	//font-family: $font-family-base
 	&.fixed
-		//overflow-y: hidden
+		overflow: hidden
 		.logo-svg
 			fill: #000
 		.header__mobil
@@ -28,7 +28,7 @@ body
 		.wrapper__content.wrapper__content_bg
 			&:after 
 				background: unset
-	&.serviсes,&.page,&.gallery,&.detail
+	&.serviсes,&.page,&.gallery,&.detail,.header__sticky
 		.logo-svg
 			fill: #000
 		.header__mobil
@@ -39,7 +39,7 @@ body
 			&::after,
 			&::before
 				background: #000
-		.header__top 
+		.header__top,.header__top-right 
 			nav ul li
 				a
 					color: #626262

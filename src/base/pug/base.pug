@@ -11,9 +11,9 @@ html(lang="ru")
     body(class=pageClass)
         .wrapper
             div(class=`wrapper__content ${(pageClass === 'homepage') ? 'wrapper__content_bg' : ''}`)
+                include ../../components/header/header-sticky
                 //- Include header
                 include ../../components/header/header
-
                 if (pageClass !== 'homepage')
                     nav.breadcrumbs
                         .container.d-flex.justify-content-between.breadcrumbs__container

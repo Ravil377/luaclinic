@@ -2,11 +2,15 @@
     padding-top:42px;
     background: white;
     z-index: 5;
+    // left: 0;
+    right: 0;
     // height: 100vh;
     display: none;
+    overflow-y: scroll;
     line-height: 200%;
     font-weight: 300;
-    position: absolute;
+    width: inherit;
+    position: fixed;
     @include transit();
     // overflow-y: scroll;
     opacity: 0;
