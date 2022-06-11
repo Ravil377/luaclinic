@@ -17420,7 +17420,7 @@ a[href="#consultation"] .icon-arrow-right-long {
   position: relative;
   max-width: 420px;
   width: 100%;
-  z-index: 2;
+  z-index: 1;
 }
 .banner .banner__left .banner__images {
   width: 100%;
@@ -17438,7 +17438,7 @@ a[href="#consultation"] .icon-arrow-right-long {
   object-fit: contain;
 }
 .banner .banner__right {
-  z-index: 2;
+  z-index: 1;
   max-width: 500px;
   width: 100%;
 }
