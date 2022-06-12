@@ -14776,12 +14776,14 @@ ol {
 .header.active a:hover:not([href="#enroll"]) {
   color: #BDBDBD;
 }
-.header.active .menu-services,
+@media (min-width: 1200px) {
+  .header.active .menu-services,
 .header.active .menu-services__close-btn {
-  display: flex;
-  animation-name: fadeIn;
-  animation-duration: 1s;
-  animation-fill-mode: both;
+    display: flex;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
 }
 .header.active .header__bottom-menu a {
   color: #000;
@@ -15915,18 +15917,23 @@ a[href="#consultation"] .icon-arrow-right-long {
 }
 
 .menu-services {
-  padding-top: 42px;
-  background: white;
-  z-index: 5;
-  right: 0;
   display: none;
-  overflow-y: scroll;
-  line-height: 200%;
-  font-weight: 300;
-  width: inherit;
-  position: fixed;
-  transition: all 0.24s;
-  opacity: 0;
+}
+@media (min-width: 1200px) {
+  .menu-services {
+    display: none;
+    padding-top: 42px;
+    padding-bottom: 42px;
+    background: white;
+    z-index: 5;
+    line-height: 200%;
+    font-weight: 300;
+    height: 70vh;
+    width: inherit;
+    transition: all 0.24s;
+    overflow-y: scroll;
+    opacity: 0;
+  }
 }
 .menu-services ul li:first-child {
   font-size: 1.875rem;

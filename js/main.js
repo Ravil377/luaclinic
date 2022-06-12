@@ -574,8 +574,8 @@ if (document.querySelector(swiperGallery)) {
 
 // import enquire from 'enquire.js'
 // import { overlayAdd, overlayRemove } from '../overlay/overlay'
-var $hamburger = document.querySelector('[id="services"]');
-var $hamburgerBtn = document.querySelector('.hamburger--js');
+var hamburgers = document.querySelectorAll('[id="services"]');
+var hamburgerBtns = document.querySelectorAll('.hamburger--js');
 var header = document.querySelector('.header');
 var body = document.querySelector("body");
 var $menuServicesCloseBtn = document.querySelector('.menu-services__close-btn-js');
@@ -610,8 +610,12 @@ $mobilListMenuServices.addEventListener('click', function (e) {
   }
 });
 $menuServicesCloseBtn.addEventListener('click', toggleServices);
-$hamburger.addEventListener('click', toggleServices);
-$hamburgerBtn.addEventListener('click', openMobilMenu);
+hamburgers.forEach(function (item) {
+  return item.addEventListener('click', toggleServices);
+});
+hamburgerBtns.forEach(function (item) {
+  return item.addEventListener('click', openMobilMenu);
+});
 
 window.onscroll = function () {
   myFunction();
