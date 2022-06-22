@@ -1,16 +1,23 @@
 .question__list {
     margin: 0;
+    display:grid;
+    grid-template-columns: 1fr;
+    @media(min-width: 992px) {
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 50px;
+    }
     li {
         padding: 16.5px 0 ;
         border-bottom: 1px solid #E2E2E2;
+        
         cursor: pointer;
-        max-width: 629px;
+        // max-width: 609px;
         width: 100%;
         @media (min-width: 768px) {
             padding: 35px 0;
         }
         &.active {
-            p {
+            &>p {
                 color: #D1A788;
                 font-weight: 550;
                 &::before {
@@ -24,18 +31,21 @@
             }
         }
         .question__answer-container {
-            font-weight: 300;
-            margin-top: 17px;
-            font-size: 15px;
-            line-height: 130%;
-            letter-spacing: 0.01em;
-            color: #000000;
+            p {
+                font-weight: 300;
+                margin: 0;
+                font-size: 15px;
+                line-height: 130%;
+                letter-spacing: 0.01em;
+                color: #000000;
+            }
+            margin-top: 17px;          
             display: none;
             @media (min-width: 768px) {
                 font-size: 17px;
             }
         }
-        p {
+        & > p {
             @include transit();
             font-weight: 400;
             font-size: 16px;

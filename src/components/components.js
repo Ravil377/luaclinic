@@ -15,4 +15,6 @@ import './gallery/gallery'
 import './detail/detail'
 import './question/question'
 import './recommendation/recommendation'
+import './modal/modal'
+import './basic-services/basic-services'
 

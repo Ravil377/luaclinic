@@ -1,14 +1,21 @@
 // import enquire from 'enquire.js'
 // import { overlayAdd, overlayRemove } from '../overlay/overlay'
 
-const $hamburger = document.querySelector('[id="services"]');
-const $hamburgerBtn = document.querySelector('.hamburger--js');
+const hamburgers = document.querySelectorAll('[id="services"]');
+const hamburgerBtns = document.querySelectorAll('.hamburger--js');
 const header = document.querySelector('.header');
 const body = document.querySelector("body");
 const $menuServicesCloseBtn = document.querySelector('.menu-services__close-btn-js');
 const mobilListMenu = document.querySelector('.header__mobil-menu-list-1');
 const $mobilListMenuServices = document.querySelector('.header__mobil-menu-services');
 const mobilMenu = document.querySelector('.header__mobil-menu');
+const searchBtns = document.querySelectorAll('.search-btn-js');
+const search = document.querySelector('.header__search-js');
+const searchCloseBtn = document.querySelector('.search-close-btn-js');
+
+
+searchCloseBtn && searchCloseBtn.addEventListener('click', () => search.classList.remove('active'));
+searchBtns && searchBtns.forEach(btn => btn.addEventListener('click', () => search.classList.add('active')));
 
 const toggleServices = () => {
 	header.classList.toggle('active');
@@ -21,6 +28,11 @@ const openMobilMenu = () => {
 
 mobilListMenu.addEventListener('click', (e) => {
 	const isList = e.target.dataset.list === 'all';
+	if(e.target.href) {
+		openMobilMenu();
+		mobilMenu.classList.remove('services');
+		e.target.classList.remove('active');
+	}
 	if(isList) {
 		mobilMenu.classList.toggle('list');
 		e.target.classList.toggle('active');
@@ -34,72 +46,23 @@ $mobilListMenuServices.addEventListener('click', (e) => {
 	}
 })
 $menuServicesCloseBtn.addEventListener('click', toggleServices);
-$hamburger.addEventListener('click', toggleServices);
-$hamburgerBtn.addEventListener('click', openMobilMenu);
+hamburgers.forEach(item => item.addEventListener('click', toggleServices));
+
+hamburgerBtns.forEach(item => item.addEventListener('click', openMobilMenu));
 
 
 
 window.onscroll = function() {myFunction()};
 const headerSticky = document.querySelector(".header__sticky");
+const menuMobil = document.querySelector('.detail__menu-mobil');
 const sticky = 900;
 
 function myFunction() {
   if (window.pageYOffset > sticky) {
     headerSticky.classList.add("sticky");
+	menuMobil && menuMobil.classList.add('detail__menu-mobil_sticky');
   } else {
     headerSticky.classList.remove("sticky");
+	menuMobil && menuMobil.classList.remove('detail__menu-mobil_sticky');
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-// const $mainmenu = document.querySelector('.mainmenu--js')
-// const $closeBtn = document.querySelector('.mainmenu--close')
-
-// function showMenu() {
-// 	$mainmenu.classList.add('is-active')
-// 	$hamburger.classList.add('is-active')
-// 	overlayAdd()
-// }
-
-// function hideMenu() {
-// 	$mainmenu.classList.remove('is-active')
-// 	$hamburger.classList.remove('is-active')
-// 	overlayRemove()
-// }
-
-// const clickHandler = event => {
-// 	event.preventDefault()
-
-// 	if ($mainmenu.classList.contains('is-active')) {
-// 		hideMenu()
-// 	} else {
-// 		showMenu()
-// 	}
-// }
-
-// enquire.register('screen and (max-width: 992px)', {
-// 	// deferSetup: true,
-// 	match() {
-// 		$hamburger.addEventListener('click', clickHandler)
-// 		document.addEventListener('click', event => {
-// 			if (event.target.dataset.backdrop === 'overlay') {
-// 				hideMenu()
-// 			}
-// 		})
-// 		$closeBtn.addEventListener('click', hideMenu)
-// 	},
-// 	unmatch() {
-// 		$hamburger.removeEventListener('click', clickHandler)
-// 		$closeBtn.removeEventListener('click', hideMenu)
-// 	}
-// })

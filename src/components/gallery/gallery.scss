@@ -1,45 +1,96 @@
 .gallery__container {
     overflow: hidden;
 }
-.gallery__slider {
-    width: fit-content;
-}
+
 .gallery__category {
     font-weight: 400;
     font-size: 30px;
     line-height: 105%;
     letter-spacing: 0.01em;
     color: #000000;
+
     .slider-nav {
         top: -11px;
     }
 }
 .gallery__category-list {
-    width: fit-content;
-    display: grid;
-    grid-auto-columns: 246px;
-    grid-auto-flow: column;
-    grid-template-rows: 1fr 1fr;
-    // grid-auto-flow:column;  
-    grid-gap: 10px;
-    // margin: -5px;
+    // width: fit-content;
+    display: flex;
     margin-top: 32px;
-    // overflow: auto;
+    flex-direction: column;
+    @media(min-width: 992px) {
+        flex-direction: row;
+    }
+    
     li {
-        // margin: 5px;
+        width: 100%;
+        margin-bottom: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+        @media(min-width: 992px) {
+            min-width: 246px;
+            display:flex;
+            flex-direction: column;
+        }
         &:first-child {
-            grid-column: 1/3;
-            grid-row: 1/3;
+            width: 100%;
+            display:flex;
+            @media(min-width: 992px) {
+                min-width: 516px;
+            }
         }
         img {
-            
             width: 100%;
             height: 100%;
             object-fit: cover;
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
     }
 }
+.gallery__category-list_mobil {
+    @media (max-width: 992px) {
+        & > li:nth-of-type(n+4) {
+            display: none;
+        }    
+    }
+}
 
-.gallery__slider {
-    // overflow: hidden;
+.gallery__category button {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    letter-spacing: 0.01em;
+    color: #000000;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 12px 31px;
+    background-color: white;
+    border: 1px solid #B7B7B7;
+    @include transit();
+    display: flex;
+    justify-content: space-between;
+    .circle-btn {
+        transform: rotate(90deg);
+    }
+    &:hover {
+        color: #D1A788;
+        border: 1px solid #D1A788;
+        .circle-btn {
+            border: 1px solid #D1A788;
+            animation-name: hvr-icon-wobble-vertical;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 1;
+            svg {
+                fill: #D1A788;
+            }
+        }
+
+
+    }   
 }

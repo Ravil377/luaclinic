@@ -28,3 +28,65 @@
         }
     }
 }
+
+.header__search {
+    position: fixed;
+    z-index: 20;
+    width: 100%;
+    top: 0;
+    background: white;
+    display: flex;
+    justify-content: center;
+    transform: translateY(-100%);
+
+    @include transit();
+    &.active {
+        transform: translateY(0);
+    }
+    .search {
+        max-width: 1290px;
+        width: 100%;
+        .search-close-btn {
+            display: block;
+        }
+        input {
+            padding-top: 58px;
+            padding-bottom: 58px;
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 130%;
+            border: none;
+            outline: none;
+            &::placeholder {
+                font-weight: 400;
+                font-size: 22px;
+                line-height: 130%;
+            }
+        }
+        .search-btn {
+            top: 50%;
+            transform: translateY(-50%);
+            width: 33px;
+            height: 33px;
+            cursor:pointer;
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+.search-close-btn {
+    display: none;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 100px;
+    position: absolute;
+    cursor:pointer;
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+}

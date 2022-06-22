@@ -7,33 +7,31 @@
 	}
 }
 .card {
+    height: 100%;
     a {
         @media (max-width: 768px) {
             display: flex;  
             width: 100%;  
         }
-        
-    }
-    @include transit();
-    &:hover {
-        p {
-            font-weight: 550;
-            font-size: 16px;
-            @media (min-width: 768px) {
-                font-size: 22px;
-            }
-        }
-        img {
-            animation: flash 1.5s;
-        }
-        .circle-btn {
-            background: #D1A788;
-            svg {
-                fill: #fff;
+        @include transit();
+        &:hover {
+            .text {
+                font-weight: 550;
+                font-size: 16px;
+                @media (min-width: 768px) {
+                    font-size: 22px;
+                }
+                .circle-btn {
+                    background: #D1A788;
+                    svg {
+                        fill: #fff;
+                    }
+                }
             }
         }
     }
     .image {
+        height: 274px;
         img {
             object-fit: cover;
             width: 100%;
@@ -80,6 +78,7 @@
         align-items: center;
         justify-content: space-between;
         padding: 12px 21px 12px 31px;
+
         @media (min-width: 768px) {
             justify-content: center;
             flex-direction: column;
@@ -311,5 +310,54 @@
     }
     img:nth-child(4){
         transform: translateX(-45px);
+    }
+}
+
+.card__text {
+    ul {
+        display: flex;
+        margin-bottom: 16px;
+        li {
+            margin-right: 5px;
+            &:last-child {
+                margin-right: 0;
+            }
+            a {
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 110%;
+                letter-spacing: 0.01em;
+                color: #999999;
+                @include transit();
+                &:hover {
+                    color: #000;
+                }
+            }
+        }
+    }
+    & > a {
+        flex-direction: row !important;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 130%;
+        letter-spacing: 0.01em;
+        color: #000000;
+        @include transit();
+        &:hover {
+            font-weight: 550;
+            font-size: 16px;
+            @media (min-width: 768px) {
+                font-size: 22px;
+            }
+            .circle-btn {
+                background: #D1A788;
+                svg {
+                    fill: #fff;
+                }
+            }
+        }
+        @media (min-width: 768px) {
+            font-size: 22px;
+        }
     }
 }

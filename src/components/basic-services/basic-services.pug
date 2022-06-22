@@ -2,7 +2,7 @@ include ../card/card
 include ../card/card-all
 
 .basic-services__list
-    .row 
+    .row.basic-services__list-cards 
         .col-xl-3.col-lg-4.col-md-6
             +card('Инъекционные методики', 'photo1.jpg')
         .col-xl-3.col-lg-4.col-md-6
@@ -18,4 +18,6 @@ include ../card/card-all
         .col-xl-3.col-lg-4.col-md-6
             +card('Плазмолифтинг', 'photo7.jpg')
         .col-xl-3.col-lg-4.col-md-6
+            +card('Плазмолифтинг1', 'photo1.jpg')
+        .col-xl-3.col-lg-4.col-md-6.basic-services__list-all-btn
             +card-all('Показать<br>все услуги')

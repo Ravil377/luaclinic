@@ -15,7 +15,7 @@
         transform: translateY(-50%);
     }
 }
-.form__placeholder-container input {
+.form__placeholder-container input, textarea {
     box-sizing: border-box;
     outline: none;
     width: 100%;
@@ -32,6 +32,9 @@
         padding: 20px 38px;
         font-size: 17px;
     }
+}
+.form__placeholder-container textarea {
+    height: 213px;
 }
 .form__placeholder-container label {
     width: 100%;
@@ -50,9 +53,22 @@
         left: 38px;
     }
 }
-.form__placeholder-container input:focus + label,
-.form__placeholder-container input:hover + label,
-.form__placeholder-container input:not(:placeholder-shown) + label {
+.form__placeholder-container input:focus .form__placeholder-container label,
+.form__placeholder-container input:hover .form__placeholder-container label,
+.form__placeholder-container input:not(:placeholder-shown) .form__placeholder-container label {
+    top: -20px;
+    left: 0;
+    background-color: transparent;
+    transform: translateX(0);
+    // font-size: 11px;
+    padding: 2px 10px;
+    @media (min-width: 768px) {
+        top: -24px;
+    }
+}
+.form__placeholder-container textarea:focus .form__placeholder-container label,
+.form__placeholder-container textarea:hover .form__placeholder-container label,
+.form__placeholder-container textarea:not(:placeholder-shown) .form__placeholder-container label {
     top: -20px;
     left: 0;
     background-color: transparent;
@@ -68,14 +84,38 @@
 .form__placeholder-container input:not(:placeholder-shown) {
     border: 1px solid #030303;
 }
-
+.form__placeholder-container textarea:focus,
+.form__placeholder-container textarea:hover,
+.form__placeholder-container textarea:not(:placeholder-shown) {
+    border: 1px solid #030303;
+}
 .form__button-container {
+    position: relative;
     font-weight: 400;
     font-size: 12px;
     line-height: 130%;
     letter-spacing: 0.02em;
     color: #999999;
     text-align: center;
+    .wpcf7-spinner {
+        display: none;
+    }
+    svg {
+        position: absolute;
+        width: 45px;
+        right: 36px;
+        top: 24px;
+        @media (min-width: 576px) {
+            width: 69px;
+        }
+    }
+    input:hover + svg {
+        animation-name: hvr-icon-wobble-horizontal1;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+    }
+    
     @media (min-width: 576px) {
         text-align: left;
     }

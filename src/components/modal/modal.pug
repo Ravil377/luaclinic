@@ -1,0 +1,48 @@
+.modal.modal-js
+    .modal__container.modal__container-js
+        .modal__close.modal__close-js
+        .modal__content.modal__content-enroll-js
+            .logo
+                include ../logo/logo
+            .modal__title Запишитесь на консультацию!
+            .modal__desc Если возникли вопросы, мы с радостью, и в самые короткие сроки на них ответим!
+            .form__input-container.mb-30
+                .form__placeholder-container
+                    input(type="text" placeholder="" required)
+                    label Ваше имя
+                |  Пожалуйста, представьтесь, как к Вам обращаться
+            .form__input-container.mb-30
+                .form__placeholder-container
+                    input(type="tel" placeholder=" " required)#phone
+                    label Номер телефона
+                    +icon('flag')
+                | Никакой рекламы и спама
+            .form__button-container.mt-20
+                button(type="submit") Получить консультацию
+                    +icon('arrow-right-long')
+                | Отправляя запрос Вы соглашаетесь на обработку персональных данных. Данные не передаются третьим лицам
+        .modal__content.modal__content-question-js
+            .logo
+                include ../logo/logo
+            .modal__title Запишитесь на консультацию!
+            .modal__desc Если возникли вопросы, мы с радостью, и в самые короткие сроки на них ответим!
+            .form__input-container.mb-30
+                .form__placeholder-container
+                    input(type="text" placeholder="" required)
+                    label Ваше имя
+                |  Пожалуйста, представьтесь, как к Вам обращаться
+            .form__input-container.mb-30
+                .form__placeholder-container
+                    input(type="tel" placeholder=" " required)#phone
+                    label Номер телефона
+                    +icon('flag')
+                | Никакой рекламы и спама
+            .form__input-container.mb-30
+                .form__placeholder-container
+                    textarea(type="text" placeholder=" " required)
+                    label Ваш вопрос
+                | Задайте свой вопрос
+            .form__button-container.mt-20
+                button(type="submit") Получить консультацию
+                    +icon('arrow-right-long')
+                | Отправляя запрос Вы соглашаетесь на обработку персональных данных. Данные не передаются третьим лицам

@@ -22,8 +22,9 @@
             align-items: center;
             @media (min-width: 768px) {
                 flex-direction: column;
-                height: 407px;
+                min-height: 407px;
                 margin: 15px;
+                height: auto;
             }
             .image {
                 width: 90px;
@@ -40,6 +41,17 @@
     }
     
 }
+.basic-services__list-cards {
+    & > div:nth-of-type(n+8) {
+        display:none;
+    }
+    & > div:last-of-type {
+        display:block;
+    }
+}
+// div.basic-services__list-all-btn {
+//     display: block;
+// }
 .basic-services__bottom  {
     display: flex;
     flex-direction: column;

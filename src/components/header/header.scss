@@ -25,11 +25,14 @@
         }
         .menu-services,
         .menu-services__close-btn {
-            display: flex;
-            animation-name: fadeIn;
-            animation-duration: 1s;
-            animation-fill-mode: both;
+            @media (min-width: 1200px) {
+                display: flex;
+                animation-name: fadeIn;
+                animation-duration: 1s;
+                animation-fill-mode: both;   
+            }
         }
+
         .header__bottom-menu {
             a {
                 color: #000;
@@ -159,6 +162,7 @@
     }
 }
 .header__mobil {
+    display: flex;
     a {
         &:hover {
             svg {
@@ -405,6 +409,7 @@
     background: white;
     position: fixed;
     top: 0;
+    left: 0;
     z-index: 10;
     width: 100%;
     transform: translateY(-100%);
@@ -412,6 +417,11 @@
     &.sticky {
         transform: translateY(0);
     }
+}
+
+.header__sticky.sticky + .header.active .menu-services{
+    top: 76px;
+    height: fit-content;
 }
 
 .header__sticky-link {
